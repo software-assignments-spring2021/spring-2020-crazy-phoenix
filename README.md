@@ -19,3 +19,6 @@ and scope of this class.
 
 # How to Contribute
 [Contributing](https://github.com/nyu-software-engineering/spring-2020-crazy-phoenix/blob/master/CONTRIBUTING.md)
+
+# Additional Links
+[Prototype](https://github.com/nyu-software-engineering/spring-2020-crazy-phoenix/blob/master/ux-design/prototype.pdf)
