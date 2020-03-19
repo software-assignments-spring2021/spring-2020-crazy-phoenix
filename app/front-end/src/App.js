@@ -8,9 +8,12 @@ function App() {
       <header className="App-header">
         <p className="back_icon">&#60;</p>
 
-        <div className="query">
+        <div className="query_box">
           <input type="text"/>
           <input type="text"/>
+        </div>
+
+        <div className="search">
           <input type="submit" value="GO"/>
         </div>
 
