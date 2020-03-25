@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import './App.css';
+import HomePage from './HomePage.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HomePage></HomePage>
   );
 }
+
+// function DetailedRoute(){
+//   const min = 2;
+//   const max = 6;
+//   let numRoutes = Math.floor(Math.random() * (+max - +min)) + +min;
+//   routes = []
+//   const r = <div className = "Stop">Stop Name</div>
+//   for (let i=0; i<numRoutes; i++){
+//       routes.push(r)  
+//   }
+//   return(
+//     <div className = "Stops">
+//       {routes}
+//     </div>
+//   )
+// }
 
 export default App;
