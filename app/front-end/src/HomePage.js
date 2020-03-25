@@ -1,10 +1,11 @@
 import React from 'react';
+import './HomePage.css';
 
 function HomePage(){
     return (
         <div className="App">
           <header className="App-header">
-          <button type = "button">
+          <button type = "button" id = "Burger">
            Home
           </button>
           <SearchBox></SearchBox>
@@ -22,13 +23,17 @@ function SearchBox() {
     }
     return ( 
       <form onSubmit = {handleClick() } className = "Search-form">
-        <label>
-          From:
+        <label id = "From-bar">
+          <div id = "From-text">
+          From
+          </div>
           <input type = "text" style ={{width: 300}} />
           
         </label>
-        <label>
-          To:
+        <label id = "To-bar">
+          <div id ="To-text">
+          To
+          </div>
           <input type = "text" style ={{width: 300}}/>
   
           <input type="submit" style = {{marginLeft: 10}} value="GO" />
