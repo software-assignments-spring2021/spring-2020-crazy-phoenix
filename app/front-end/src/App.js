@@ -31,36 +31,6 @@ function App() {
   
 }
 
-function LoginForm(){
 
-    return(
-      <div>
-        <h2>Welcome</h2>
-        <h3>Sign In</h3>
-        <form id='login' method = 'POST'>
-        Email  <input type='email' id = 'inputEmail'name='email'/><br/>
-        Password<input type='password' id='inputPassword' name='loginEmail'/><br/>
-        <input type='submit' value='Sign In' />
-        </form>
-  
-      </div>
-  
-    );
-  
-
-}
-
-function SignUpForm(){
-  return(
-      <div>
-          <h2>Welcome</h2>
-          <h1>Create An Account</h1>
-          <form type='text' method='POST'>
-          First Name: <input type='text' id='firstName'/><br/>
-          Last Name: <input type='text' id='lastName' /><br/>
-          </form>
-      </div>
-  )
-}
 
 export default App;
