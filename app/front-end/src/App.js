@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignupForm from './SignUp.js';
 import LoginForm from './Login.js';
-import HomePage from './HomePage.js';
+import {HomePage} from './HomePage.js';
 import DetailedRoute from './DetailedRoute.js';
 import Profile from './UserProfile.js';
+import PossibleRoutes from './possibleRoutes';
+import logo from './logo.svg';
+import './App.css';
 
 class App extends Component {
     state = {
@@ -27,6 +30,7 @@ class App extends Component {
       <Router>
       <Switch>
         {/* <header className="App-header"> */}
+        
         <Route path="/Login">
           <LoginForm hamburgerHandler={this.hamburgerHandler}/>
           {hamburger}
@@ -45,6 +49,10 @@ class App extends Component {
         <Route path = "/Route">
           <DetailedRoute></DetailedRoute>
         </Route>
+
+        <Route path="/possibleRoutes">
+          <PossibleRoutes/>
+        </Route>
       </Switch>
       </Router>
                 
@@ -54,4 +62,3 @@ class App extends Component {
 }
     
 export default App;
-
