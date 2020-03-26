@@ -1,3 +1,4 @@
+/*
 .App {
   text-align: center;
   min-height: 100vh;
@@ -31,7 +32,7 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes App-logo-npspin {
   from {
     transform: rotate(0deg);
   }
@@ -65,4 +66,4 @@
 }
 .content {
   color: black;
-}
+}*/
