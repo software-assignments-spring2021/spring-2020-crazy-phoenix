@@ -1,0 +1,14 @@
+.back_icon {
+    color: black;
+}
+
+.route {
+    border-bottom: 2px solid blue;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.content {
+    color: black;
+}

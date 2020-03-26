@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignupForm from './SignUp.js';
 import LoginForm from './Login.js';
-import HomePage from './HomePage.js';
+import {HomePage} from './HomePage.js';
 import DetailedRoute from './DetailedRoute.js';
+import PossibleRoutes from './possibleRoutes';
+import logo from './logo.svg';
+import './App.css';
 
 function App(props) {
 
@@ -27,12 +30,14 @@ function App(props) {
         <Route path = "/Route">
           <DetailedRoute></DetailedRoute>
         </Route>
+
+        <Route path="/possibleRoutes">
+          <PossibleRoutes/>
+        </Route>
       </Switch>
       </Router>
                 
       </div>
     );
 }
-
 export default App;
-
