@@ -5,6 +5,7 @@ import SignupForm from './SignUp.js'
 import LoginForm from './Login.js'
 import './App.css';
 
+
 function App() {
   
   //<button onClick={this.Toggle.bind(this, check)} id='SingUpButton'>Sign Up</button>
