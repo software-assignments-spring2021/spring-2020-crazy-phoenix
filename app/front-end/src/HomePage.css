@@ -45,3 +45,14 @@
       position: relative;
       right: 30rem;
   }
+  .bm-burger-button {
+    position: fixed;
+    width: 44px;
+    height: 44px;
+    left: 36px;
+    top: 50px;
+  }
+
+  .bm-burger-bars {
+    background: #373a47;
+  }

@@ -1,13 +1,14 @@
 import React from 'react';
 import './HomePage.css';
+import { slide as Menu } from 'react-burger-menu'
 
 function HomePage(){
     return (
         <div className="App">
           <header className="App-header">
-          <button type = "button" id = "Burger">
-           Home
-          </button>
+          <Menu id = "Burger">
+            <a id="account" className="menu-item" href="/"></a>
+          </Menu>
           <SearchBox></SearchBox>
           </header>
           <CityMap></CityMap>
