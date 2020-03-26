@@ -1,6 +1,7 @@
 import React, {Component, useState, useEffect} from 'react';
 //import axios from 'axios';
 import './possibleRoutes.css';
+import {SearchBox, ORIGIN, DESTINATION} from './HomePage';
 
 
 
@@ -39,10 +40,11 @@ const PossibleRoutes = (props) => {
 
   return (
     <div className="possibleRoutes">
+      <SearchBox/>
       <h1>possible routes</h1>
       <section className="content">
         {data.map(route => (
-          <section className="route">{route}</section>
+          <section className="route">{ORIGIN} {route}</section>
           // link to route details page
         ))}
 
