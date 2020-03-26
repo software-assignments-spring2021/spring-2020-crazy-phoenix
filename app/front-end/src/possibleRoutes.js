@@ -15,8 +15,18 @@ const getRoute = () => {
 };
 
 
+const ROUTES = [['1', '2', '3'], ['A', 'N', 'Q']];
 
-
+const addArrows = (route) => {
+  const newArray = [];
+  for (let i = 0; i < route.length; i++) {
+    newArray.push(route[i]);
+    if (i < route.length-1) {
+      newArray.push('->');
+    }
+  }
+  return newArray;
+};
 
 
 
@@ -34,7 +44,12 @@ const PossibleRoutes = (props) => {
 
     //const subwayLines = ['1', '2', '3', '4', '5', '6', '7', 'A', 'C', 'E', 'B', 'D', 'F', 'M', 'G', 'N', 'Q', 'R', 'J', 'Z', 'L', 'S', 'G'];
     //setData(subwayLines);
-    const routes = [['1', '2', '3'], ['A', 'N', 'Q']];
+    const routes = [];
+    for (let i = 0; i < ROUTES.length; i++) {
+      const newRoute = addArrows(ROUTES[i]);
+      routes.push(newRoute);
+    }
+
     setData(routes);
   }, []);
 
@@ -44,7 +59,7 @@ const PossibleRoutes = (props) => {
       <h1>possible routes</h1>
       <section className="content">
         {data.map(route => (
-          <section className="route">{ORIGIN} {route}</section>
+          <section className="route">Origin {route} Destination</section>
           // link to route details page
         ))}
 
