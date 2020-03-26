@@ -5,7 +5,7 @@ import SignupForm from './SignUp.js'
 import LoginForm from './Login.js'
 import Toolbar from './toolbar.js'
 import './App.css';
-
+import HomePage from './HomePage.js';
 
 function App() {
   
@@ -19,9 +19,6 @@ function App() {
                 
       </div>
     );
-  
 }
-
-
 
 export default App;
