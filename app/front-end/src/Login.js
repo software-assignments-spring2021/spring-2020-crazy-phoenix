@@ -17,12 +17,12 @@ function LoginForm(props){
           Email  <input type='email' id = 'inputEmail'name='email'/><br/>
           Password<input type='password' id='inputPassword' name='loginEmail'/><br/>
           <Link to='/Home'>
-          <input type='submit' value='Sign In' />
+          <input type='submit' value='Sign In'/>
           </Link>
           </form>
     
         </div>
-        <Link to='/SignUp'>Sign Up</Link>
+        <Link to='/SignUp' id = "signupLink">Sign Up</Link>
         </header>
     
       );

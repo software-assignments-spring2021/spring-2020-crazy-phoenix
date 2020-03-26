@@ -33,3 +33,7 @@ input#signUpPassword{
 input#confirmPassword{
     margin-left: 4px
 }
+
+#loginLink{
+    color: white;
+}
