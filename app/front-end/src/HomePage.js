@@ -7,7 +7,8 @@ function HomePage(){
         <div className="App">
           <header className="App-header">
           <Menu id = "Burger">
-            <a id="account" className="menu-item" href="/"></a>
+            <a id="account" className="menu-item" href="/">Account</a>
+            <h1>Hello</h1>
           </Menu>
           <SearchBox></SearchBox>
           </header>
@@ -22,13 +23,15 @@ function SearchBox() {
       console.log("from");
       console.log("to");
     }
+    let fromtext = "";
+    let totext = "";
     return ( 
       <form onSubmit = {handleClick() } className = "Search-form">
         <label id = "From-bar">
           <div id = "From-text">
           From
           </div>
-          <input type = "text" style ={{width: 300}} />
+          <input type = "text" style ={{width: 300}}/>
           
         </label>
         <label id = "To-bar">
