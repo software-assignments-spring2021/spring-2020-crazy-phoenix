@@ -1,0 +1,22 @@
+
+.App {
+    background-color: wheat;
+}
+
+.Stops {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: wheat;
+}
+.Stop {
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    padding: 1em;
+}
+
+.Arrow {
+    max-width:5%;
+    height: auto;
+}
