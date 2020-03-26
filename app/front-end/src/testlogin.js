@@ -9,6 +9,9 @@ function LoginForm(){
         <header id='login'>
         <div>
         <Menu>
+            
+                <p>HomePage</p>
+            
         </Menu>
           <h2>Welcome</h2>
           <h3>Sign In</h3>
