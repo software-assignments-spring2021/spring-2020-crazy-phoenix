@@ -11,8 +11,6 @@ function HomePage(){
         <div className="App">
           <header className="App-header">
           <Menu id = "Burger">
-            <a id="account" className="menu-item" href="/">Account</a>
-            <h1>Hello</h1>
           </Menu>
           <SearchBox></SearchBox>
           </header>
