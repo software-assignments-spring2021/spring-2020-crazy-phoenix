@@ -1,5 +1,5 @@
 import React, {Component, useState, useEffect} from 'react';
-import {Redirect, Route} from 'react-router-dom';
+import {Redirect, Route, Link} from 'react-router-dom';
 import './HomePage.css';
 import { slide as Menu } from 'react-burger-menu'
 import PossibleRoutes from './possibleRoutes';
@@ -47,7 +47,9 @@ function SearchBox() {
           <input name="destination" value={destination} onChange={e => setDestination(e.target.value)} type = "text" style ={{width: 300}}/>
 
         </label>
+        <Link to ="/possibleRoutes">
         <input type="submit" style = {{marginLeft: 10}} value="GO" />
+        </Link>
       </form>
     )
   }
