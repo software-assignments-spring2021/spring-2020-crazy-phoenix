@@ -5,6 +5,7 @@ import SignupForm from './SignUp.js';
 import LoginForm from './Login.js';
 import './App.css';
 import HomePage from './HomePage.js';
+import DetailedRoute from './DetailedRoute.js';
 
 function App(props) {
 
