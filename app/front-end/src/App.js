@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import logo from './logo.svg';
+import logo from './logo.svg';  
 import SignupForm from './SignUp.js'
 import LoginForm from './Login.js'
 import Toolbar from './toolbar.js'

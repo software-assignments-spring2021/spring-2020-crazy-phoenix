@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .App {
   text-align: center;
 }
@@ -29,6 +29,18 @@
   color: #61dafb;
 }
 
+label {
+  width: 40px;
+  line-height: 260px;
+}
+
+input#inputEmail{
+  flex: 0 0 200px;
+  margin-left: 35px;
+}
+input#inputPassword{
+  margin-left: 5px;
+}
 
 
 
@@ -40,5 +52,4 @@
     transform: rotate(360deg);
   }
 }
-=======
->>>>>>> ac3c69f5a4f9a1c89fd08aea3c2e217dcc3af981
+
