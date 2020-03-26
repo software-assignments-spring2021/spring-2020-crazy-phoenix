@@ -69,12 +69,7 @@ const PossibleRoutes = (props) => {
           <section className="route">Origin {route} Destination
             <Link to="/Route">select</Link>
           </section>
-
-          // link to route details page
-
         ))}
-
-
       </section>
     </div>
   );
