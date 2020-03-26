@@ -25,7 +25,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 10px;
-  border-bottom: 2px solid black;
 }
 
 .App-link {
@@ -52,18 +51,3 @@
 .search {
   padding-top: 30px;
 }
-
-.back_icon {
-  color: black;
-}
-
-.route {
-  border-bottom: 2px solid blue;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-.content {
-  color: black;
-}*/
