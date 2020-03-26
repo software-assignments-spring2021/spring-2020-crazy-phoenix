@@ -9,15 +9,16 @@ function LoginForm(){
         <header id='login'>
         <div>
         <Menu>
+            
+                <p>HomePage</p>
+            
         </Menu>
           <h2>Welcome</h2>
           <h3>Sign In</h3>
           <form id='login' method = 'POST'>
           Email  <input type='email' id = 'inputEmail'name='email'/><br/>
           Password<input type='password' id='inputPassword' name='loginEmail'/><br/>
-          <Link to='/Home'>
           <input type='submit' value='Sign In' />
-          </Link>
           </form>
     
         </div>

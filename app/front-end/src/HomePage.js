@@ -6,11 +6,9 @@ import PossibleRoutes from './possibleRoutes';
 
 function HomePage(){
     return (
-        <div className="App">
+        <div className="home">
           <header className="App-header">
           <Menu id = "Burger">
-            <a id="account" className="menu-item" href="/">Account</a>
-            <h1>Hello</h1>
           </Menu>
           <SearchBox></SearchBox>
           </header>
