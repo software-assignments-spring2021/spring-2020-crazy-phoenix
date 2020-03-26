@@ -1,8 +1,18 @@
 
+header#signup {
+  background-color: 	#8B008B;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
 
 input#firstName{
-    margin-left: 75px;
+    margin-left: 74px;
 }
 
 input#lastName{
@@ -18,9 +28,9 @@ input#signUpEmail{
 }
 
 input#signUpPassword{
-    margin-left: 84px;
+    margin-left: 86px;
 }
 
 input#confirmPassword{
-    margin-left: 1px
+    margin-left: 4px
 }
