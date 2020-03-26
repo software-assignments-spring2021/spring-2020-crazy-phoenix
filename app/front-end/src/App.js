@@ -12,13 +12,12 @@ function App(props) {
       <Router>
       <Switch>
         {/* <header className="App-header"> */}
+        
         <Route path="/Login">
           <LoginForm/>
-          <Link to='/SignUp'>Sign Up</Link>
         </Route>
         <Route path="/SignUp">
           <SignupForm/>
-          <Link to='/Login'>Login</Link>
         </Route>
         
         {/* </header> */}
@@ -33,7 +32,7 @@ function App(props) {
                 
       </div>
     );
-  
 }
 
 export default App;
+
