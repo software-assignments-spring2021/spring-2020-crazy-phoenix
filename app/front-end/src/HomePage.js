@@ -1,10 +1,8 @@
 import React, {Component, useState, useEffect} from 'react';
-import {Redirect, Route} from 'react-router-dom';
+import {Redirect, Route, Link} from 'react-router-dom';
 import './HomePage.css';
 import { slide as Menu } from 'react-burger-menu'
 import PossibleRoutes from './possibleRoutes';
-
-let ORIGIN, DESTINATION;
 
 function HomePage(){
     return (
@@ -22,15 +20,15 @@ function HomePage(){
       );
 }
 
-function SearchBox() {
+function SearchBox(props) {
 
   const [origin, setOrigin] = useState("");
     const handleClick = (event) => {
       event.preventDefault();
-      ORIGIN = origin;
-      DESTINATION = destination;
+      //props.origin = origin;
+      //props.destination = destination;
 
-      alert(`origin: ${origin}\ndestination: ${destination}`);
+      //alert(`origin: ${origin}\ndestination: ${destination}`);
       //return <Redirect to={{pathname: "/possibleRoutes", state: {origin: origin, destination: destination}}}/>;
 
     };
@@ -49,7 +47,11 @@ function SearchBox() {
           <input name="destination" value={destination} onChange={e => setDestination(e.target.value)} type = "text" style ={{width: 300}}/>
 
         </label>
-        <input type="submit" style = {{marginLeft: 10}} value="GO" />
+
+
+        <Link to={`/possibleRoutes/${origin}`}>
+          <input type="submit" style = {{marginLeft: 10}} value="GO" />
+        </Link>
       </form>
     )
   }
@@ -61,4 +63,4 @@ function SearchBox() {
     )
   }
 
-  export {HomePage, SearchBox, ORIGIN, DESTINATION}
+  export {HomePage, SearchBox}

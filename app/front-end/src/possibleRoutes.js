@@ -1,8 +1,7 @@
 import React, {Component, useState, useEffect} from 'react';
-//import axios from 'axios';
 import './possibleRoutes.css';
 import {SearchBox, ORIGIN, DESTINATION} from './HomePage';
-import { Redirect, Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import {DetailedRoute} from './DetailedRoute';
 
 
@@ -56,12 +55,21 @@ const PossibleRoutes = (props) => {
   const [data, setData] = useState([]);
   useEffect(() => {
 
+
     //const subwayLines = ['1', '2', '3', '4', '5', '6', '7', 'A', 'C', 'E', 'B', 'D', 'F', 'M', 'G', 'N', 'Q', 'R', 'J', 'Z', 'L', 'S', 'G'];
     //setData(subwayLines);
     const routes = [];
+    if (props.origin && props.origin.length>0) {
+      routes.push(props.origin);
+    }
+
     for (let i = 0; i < possibleRoutes.length; i++) {
       const newRoute = addArrows(possibleRoutes[i]);
       routes.push(newRoute);
+    }
+
+    if (props.destination && props.destination.length>0) {
+      routes.push(props.destination);
     }
 
     setData(routes);
@@ -76,6 +84,7 @@ const PossibleRoutes = (props) => {
           <section className="route">Origin {route} Destination
             <Link to="/Route">select</Link>
           </section>
+
           // link to route details page
 
         ))}
