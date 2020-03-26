@@ -36,7 +36,7 @@ function SearchBox(props) {
 
     let fromtext = "";
     let totext = "";
-    return ( 
+    return (
       <form onSubmit = {handleClick} className = "Search-form">
         <label id = "From-bar">
           <div id = "From-text">From</div>

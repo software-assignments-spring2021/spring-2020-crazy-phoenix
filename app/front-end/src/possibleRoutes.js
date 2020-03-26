@@ -77,6 +77,7 @@ const PossibleRoutes = (props) => {
 
   return (
     <div className="possibleRoutes">
+      <Link to="/Home">&#60;</Link>
       <SearchBox/>
       <h1>possible routes</h1>
       <section className="content">
