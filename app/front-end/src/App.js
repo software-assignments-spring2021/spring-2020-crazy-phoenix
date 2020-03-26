@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import logo from './logo.svg';
 import SignupForm from './SignUp.js';
 import LoginForm from './Login.js';
-import './App.css';
 import HomePage from './HomePage.js';
 import DetailedRoute from './DetailedRoute.js';
 
@@ -27,11 +25,13 @@ function App(props) {
         <Route path = "/Home">
           <HomePage></HomePage>
         </Route>
+        <Route path = "/Route">
+          <DetailedRoute></DetailedRoute>
+        </Route>
       </Switch>
       </Router>
                 
       </div>
-  //    <HomePage></HomePage>
     );
   
 }
