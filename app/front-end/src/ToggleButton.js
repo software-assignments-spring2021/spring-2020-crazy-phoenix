@@ -4,7 +4,7 @@ import LoginForm from './Login.js'
 function ToggleButton(props){
     return(
     <div>
-    <button className='toggle-button'>
+    <button className='toggle-button' onClick={props.click}>
         <div className='toggle-line'></div>
         <div className='toggle-line'></div>
         <div className='toggle-line'></div>
