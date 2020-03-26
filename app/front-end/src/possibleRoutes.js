@@ -4,8 +4,6 @@ import {SearchBox, ORIGIN, DESTINATION} from './HomePage';
 import {Link} from "react-router-dom";
 import {DetailedRoute} from './DetailedRoute';
 
-
-
 const getRoute = () => {
   const possibleRoutes = [];
   const subwayLines = ['1', '2', '3', '4', '5', '6', '7', 'A', 'C', 'E', 'B', 'D', 'F', 'M', 'G', 'N', 'Q', 'R', 'J', 'Z', 'L', 'S', 'G'];
@@ -27,9 +25,6 @@ const getRoute = () => {
   return possibleRoutes;
 };
 
-
-const ROUTES = [['1', '2', '3'], ['A', 'N', 'Q']];
-
 const addArrows = (route) => {
   const newArray = ['->'];
   for (let i = 0; i < route.length; i++) {
@@ -44,20 +39,9 @@ const addArrows = (route) => {
 
 const possibleRoutes = getRoute();
 
-
-
-
-
-
-
-
 const PossibleRoutes = (props) => {
   const [data, setData] = useState([]);
   useEffect(() => {
-
-
-    //const subwayLines = ['1', '2', '3', '4', '5', '6', '7', 'A', 'C', 'E', 'B', 'D', 'F', 'M', 'G', 'N', 'Q', 'R', 'J', 'Z', 'L', 'S', 'G'];
-    //setData(subwayLines);
     const routes = [];
     if (props.origin && props.origin.length>0) {
       routes.push(props.origin);
@@ -77,6 +61,7 @@ const PossibleRoutes = (props) => {
 
   return (
     <div className="possibleRoutes">
+      <Link to="/Home">&#60;</Link>
       <SearchBox/>
       <h1>possible routes</h1>
       <section className="content">
@@ -84,12 +69,7 @@ const PossibleRoutes = (props) => {
           <section className="route">Origin {route} Destination
             <Link to="/Route">select</Link>
           </section>
-
-          // link to route details page
-
         ))}
-
-
       </section>
     </div>
   );
