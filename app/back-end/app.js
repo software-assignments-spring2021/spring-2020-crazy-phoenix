@@ -7,11 +7,6 @@ const cors = require('cors');
 
 const sampleUrl = 'https://maps.googleapis.com/maps/api/directions/json?origin=Times+Square&destination=80+Lafayette+St,+New+York,+NY&mode=transit&key=API_KEY';
 
-app.get('/home', (req, res) => {
-  console.log('hellooooo');
-  res.send('hello!');
-});
-
 app.get('/data', (req, res) => {
   fetch(sampleUrl, {method: "Get"})
     .then(res => res.json())
