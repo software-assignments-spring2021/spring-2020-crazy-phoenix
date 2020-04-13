@@ -5,6 +5,10 @@ import { slide as Menu } from 'react-burger-menu'
 import PossibleRoutes from './possibleRoutes';
 
 function HomePage(){
+  fetch('http://localhost:3000/data', {
+    credentials: 'include',
+  })
+
     return (
         <div className="home">
           <header className="App-header">
@@ -16,7 +20,7 @@ function HomePage(){
         </div>
         
       );
-}
+    }
 
 function SearchBox(props) {
 
