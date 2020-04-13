@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {Component, useState, useEffect} from 'react';
+import {Redirect, Route, Link} from 'react-router-dom';
 import './HomePage.css';
 import { slide as Menu } from 'react-burger-menu'
+import PossibleRoutes from './possibleRoutes';
 
 function HomePage(){
+  fetch('http://localhost:3000/data', {
+    credentials: 'include',
+  })
+
     return (
-        <div className="App">
+        <div className="home">
           <header className="App-header">
           <Menu id = "Burger">
-            <a id="account" className="menu-item" href="/"></a>
           </Menu>
           <SearchBox></SearchBox>
           </header>
@@ -15,40 +20,49 @@ function HomePage(){
         </div>
         
       );
-}
-
-function SearchBox() {
-    function handleClick(from, to){
-      console.log("from");
-      console.log("to");
     }
-    return ( 
-      <form onSubmit = {handleClick() } className = "Search-form">
+
+function SearchBox(props) {
+
+  const [origin, setOrigin] = useState("");
+    const handleClick = (event) => {
+      event.preventDefault();
+      //props.origin = origin;
+      //props.destination = destination;
+
+      //alert(`origin: ${origin}\ndestination: ${destination}`);
+      //return <Redirect to={{pathname: "/possibleRoutes", state: {origin: origin, destination: destination}}}/>;
+
+    };
+  const [destination, setDestination] = useState("");
+
+    let fromtext = "";
+    let totext = "";
+    return (
+      <form onSubmit = {handleClick} className = "Search-form">
         <label id = "From-bar">
-          <div id = "From-text">
-          From
-          </div>
-          <input type = "text" style ={{width: 300}} />
-          
+          <div id = "From-text">From</div>
+          <input name="origin" value={origin} onChange={e => setOrigin(e.target.value)} type = "text" style ={{width: 300}}/>
         </label>
         <label id = "To-bar">
-          <div id ="To-text">
-          To
-          </div>
-          <input type = "text" style ={{width: 300}}/>
-  
-          <input type="submit" style = {{marginLeft: 10}} value="GO" />
+          <div id ="To-text"> To</div>
+          <input name="destination" value={destination} onChange={e => setDestination(e.target.value)} type = "text" style ={{width: 300}}/>
+
         </label>
-        
-        </form>
+
+
+        <Link to={`/possibleRoutes/${origin}`}>
+          <input type="submit" style = {{marginLeft: 10}} value="GO" />
+        </Link>
+      </form>
     )
   }
   function CityMap() {
     return(
       <div className = "map">
-        <img src = "NYCSubway.jpg" alt = "Map of NYC"/>
+        <img src = "https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=insertKey" alt = "Map of NYC"/>
       </div>
     )
   }
 
-  export default HomePage;
+  export {HomePage, SearchBox}

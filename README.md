@@ -11,6 +11,9 @@ Our MVP will consist of the following main features:
 * Route generation
 * Route selection
 
+# to run
+localhost:3000/Login
+
 
 # Project History
 This project was originally proposed by Ayako after thinking about how Google Maps was not sufficient for people with disabilities. 

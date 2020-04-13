@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './SignUp.css';
 
 function SignupForm(){
     return(
+        <header id='signup'>
         <div>
             <h2>Welcome</h2>
             <h1>Create An Account</h1>
@@ -17,6 +18,8 @@ function SignupForm(){
 
             </form>
         </div>
+        <Link to='/Login' id = "loginLink">Login</Link>
+        </header>
     )
 }
 
