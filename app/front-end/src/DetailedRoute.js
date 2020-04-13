@@ -1,5 +1,6 @@
 import React from 'react';
 import './DetailedRoute.css';
+import { BrowserRouter as Link } from "react-router-dom";
 
 function DetailedRoute(){
     const min = 2;
@@ -16,8 +17,13 @@ function DetailedRoute(){
     }
     Stops.pop()
     return(
+      <div>
+        <Link to ="/possibleRoutes">
+          <button type ="button">Back</button>
+        </Link>
       <div className = "Stops">
         {Stops}
+      </div>
       </div>
     )
   }

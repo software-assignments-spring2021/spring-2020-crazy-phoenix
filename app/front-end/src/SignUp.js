@@ -18,7 +18,7 @@ function SignupForm(){
 
             </form>
         </div>
-        <Link to='/Login'>Login</Link>
+        <Link to='/Login' id = "loginLink">Login</Link>
         </header>
     )
 }
