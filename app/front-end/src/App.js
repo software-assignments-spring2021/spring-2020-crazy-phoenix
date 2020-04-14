@@ -21,7 +21,6 @@ class App extends Component {
 
     render(){
     let hamburger;
-
     if(this.state.hamburgerOpen){
       hamburger = <Profile hamburgerHandler={this.hamburgerHandler}/>;
     }

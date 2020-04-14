@@ -15,7 +15,7 @@ const bronx = [
   'Pelham Parkway - White Plains Rd line', 'Simpson St'
 ];
 const brooklyn = [
-  '8 Av', '62 St / New Utrecht Av', 'Atlantic Avenue / Barkclays Center / 4 Avenue', 'Avenue H', 'Bay Parkway',
+  '8 Av', '62 St / New Utrecht Av', 'Atlantic Avenue / Barclays Center / 4 Avenue', 'Avenue H', 'Bay Parkway',
   'Borough Hall', 'Canarsie - Rockaway Parkway', 'Church Av', 'Coney Island - Stillwell Av', 'Crown Hts - Utica Av',
   'Dekalb Av', 'Euclid Av', 'Flatbush Av - Brooklyn College', 'Flushing Av', 'Franklin Av', 'Jay St - Metro Tech',
   'Kings Highway', 'Marcy Avenue', 'Myrtle - Wyckoff Avenues', 'Park Place', 'Prospect Park', 'Utica Av', 'Wilson Av'
