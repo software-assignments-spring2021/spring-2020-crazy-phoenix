@@ -6,7 +6,7 @@ const getAccessibleRouteList = require('./filter').getAccessibleRouteList;
 
 app.use(cors({ origin: 'http://localhost:3001', credentials: true }));
 
-const sampleUrl = 'https://maps.googleapis.com/maps/api/directions/json?origin=Columbia+University&destination=Hudson+Yards,+New+York,+NY&mode=transit&alternatives=true&key=API_KEY';
+const sampleUrl = 'https://maps.googleapis.com/maps/api/directions/json?origin=Times+Square&destination=50+E+28th+St,+New+York,+NY&mode=transit&alternatives=true&key=';
 
 app.get('/data', (req, res) => {
   fetch(sampleUrl, {method: "Get"})
