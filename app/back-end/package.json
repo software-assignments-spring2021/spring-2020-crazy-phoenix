@@ -15,5 +15,8 @@
     "nodemon": "^2.0.3",
     "request": "^2.88.2"
   },
-  "proxy": 3000
+  "proxy": 3000,
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
 }
