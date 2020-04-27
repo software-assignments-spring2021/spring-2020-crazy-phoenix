@@ -1,66 +1,62 @@
 import React, {Component, useState, useEffect} from 'react';
-import {Redirect, Route, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './HomePage.css';
 import { slide as Menu } from 'react-burger-menu'
+
 import PossibleRoutes from './possibleRoutes';
 
-function HomePage(){
-    return (
-        <div className="App">
-          <header className="App-header">
-          <Menu id = "Burger">
-            <a id="account" className="menu-item" href="/">Account</a>
-            <h1>Hello</h1>
-          </Menu>
-          <SearchBox></SearchBox>
-          </header>
-          <CityMap></CityMap>
-        </div>
-        
-      );
-}
+import key from './config';
+const apiKey = key.API_KEY;
+const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=' + apiKey;
 
-function SearchBox(props) {
 
-  const [origin, setOrigin] = useState("");
-    const handleClick = (event) => {
-      event.preventDefault();
-      //props.origin = origin;
-      //props.destination = destination;
+let origin, destination;
+const originHandleChange = (e) => {
+  origin = e.target.value;
+};
+const destinationHandleChange = (e) => {
+  destination = e.target.value;
+};
 
-      //alert(`origin: ${origin}\ndestination: ${destination}`);
-      //return <Redirect to={{pathname: "/possibleRoutes", state: {origin: origin, destination: destination}}}/>;
 
-    };
-  const [destination, setDestination] = useState("");
+function HomePage(props) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('clicked');
+    props.action(origin, destination);
+/*
+    const fetchUrl = `http://localhost:3000/data/?origin=${origin}&destination=${destination}`;
+    fetch(fetchUrl)
+      .then(res => res.text())
+      .then(res => {
+        console.log(res);
+        if (res !== null) {
+          props.action();
+          props.origin = 'hey';
+        } else {
+          alert('error fetching api');
+        }
+      })
+      .catch(err => err);*/
+  };
 
-    let fromtext = "";
-    let totext = "";
-    return (
-      <form onSubmit = {handleClick} className = "Search-form">
+  return (
+    <div className = "map">
+      <Menu id = "Burger">
+      </Menu>
+      <form onSubmit={handleSubmit} className = "Search-form">
         <label id = "From-bar">
           <div id = "From-text">From</div>
-          <input name="origin" value={origin} onChange={e => setOrigin(e.target.value)} type = "text" style ={{width: 300}}/>
+          <input name="origin" onChange={originHandleChange} type = "text" style ={{width: 300}}/>
         </label>
         <label id = "To-bar">
           <div id ="To-text"> To</div>
-          <input name="destination" value={destination} onChange={e => setDestination(e.target.value)} type = "text" style ={{width: 300}}/>
-
+          <input name="desto" onChange={destinationHandleChange} type = "text" style ={{width: 300}}/>
         </label>
-
-
-        <Link to={`/possibleRoutes/${origin}`}>
-          <input type="submit" style = {{marginLeft: 10}} value="GO" />
-        </Link>
+        <input type="submit" style={{marginLeft: 10}} value="GO" />
       </form>
-    )
-  }
-  function CityMap() {
-    return(
-      <div className = "map">
-        <img src = "NYCSubway.jpg" alt = "Map of NYC"/>
-      </div>
-    )
-  }
-
-  export {HomePage, SearchBox}
+      <img src = {mapUrl} alt = "Map of NYC"/>
+    </div>
+  );
+}
+  export default HomePage;

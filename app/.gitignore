@@ -120,3 +120,6 @@ typings/
 
 ## Emacs artefacts ##
 *~
+
+back-end/config.json
+front-end/src/config.js
