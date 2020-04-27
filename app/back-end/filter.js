@@ -2,7 +2,7 @@
 // only meant to compare the initial n-length of string
 const manhattan = [
   '14 St', '14 St - Union Sq', '23 St', '28 St', '34 St - Herald Sq', '34 St - Penn Station',
-  '34 St - Hudson Yds', '42 St - Port Authority Bus Terminal', '47 - 50 Sts - Rockefeller Ctr',
+  '34 St - Hudson Yds', '34 St - Hudson Yards', '42 St - Port Authority Bus Terminal', '47 - 50 Sts - Rockefeller Ctr',
   '49 St', '50 St', '51 St', '59 St-Columbus Circle', '66 St - Lincoln Center', '72 St', '86 St', '96 St',
   '125 St', '135 St', '168 St', '175 St', 'Bowling Green', 'Broadway-Lafayette St / Bleecker St',
   'Brooklyn Bridge - City Hall', 'Canal St', 'Chambers St', 'Cortlandt St', 'Dyckman St', 'Fulton St',
@@ -45,7 +45,7 @@ const getSubwayRoutes = (rawData) => {
       for (let j = 0; j < steps.length; j++) {
         if (steps[j].travel_mode === 'TRANSIT') {
           if (steps[j].transit_details['line'].vehicle['type'] !== 'BUS') {
-            accessibleList.push(steps[j]);
+            accessibleList.push(routeList[i]);
           }
 
         }
@@ -83,10 +83,18 @@ const filterRoutes = (rawData) => {
   const routesList = getSubwayRoutes(rawData);
   const filteredRoutes = [];
   for (let i = 0; i < routesList.length; i++) {
-    const arrivalStation = routesList[i].transit_details.arrival_stop['name'];
-    const departureStation = routesList[i].transit_details.departure_stop['name'];
-    if (isAccessible(arrivalStation) && isAccessible(departureStation)) {
-      filteredRoutes.push(routesList[i]);
+    const legs = routesList[i].legs;
+    for (let j = 0; j < legs.length; j++) {
+      const steps = legs[j].steps;
+      for (let k = 0; k < steps.length; k++) {
+        if (steps[k].travel_mode === 'TRANSIT') {
+          const arrivalStation = steps[k].transit_details.arrival_stop['name'];
+          const departureStation = steps[k].transit_details.departure_stop['name'];
+          if (isAccessible(arrivalStation) && isAccessible(departureStation)) {
+            filteredRoutes.push(routesList[i]);
+          }
+        }
+      }
     }
   }
   return filteredRoutes;

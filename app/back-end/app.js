@@ -29,11 +29,10 @@ passport.deserializeUser(User.deserializeUser());
 
 
 // connecting to db
-//const DB_USER = process.env.DB_USER;
-//const DB_PASS = process.env.DB_PASS;
-//const DB_HOST = process.env.DB_HOST;
-//const dbUrl = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}`;
-const dbUrl = 'mongodb://localhost/group_project';
+const DB_USER = process.env.DB_USER;
+const DB_PASS = process.env.DB_PASS;
+const DB_HOST = process.env.DB_HOST;
+const dbUrl = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}`;
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
   if (err) {
     console.log('Could not connect to database');
@@ -59,13 +58,11 @@ const replaceSpace = (location) => {
 app.get('/data', (req, res) => {
   const origin = replaceSpace(req.query.origin);
   const destination = replaceSpace(req.query.destination);
-  console.log(`origin=${origin}`)
   const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination},+New+York,+NY&mode=transit&alternatives=true&key=${apiKey}`;
   fetch(url, {method: "Get"})
     .then(res => res.json())
     .then((json) => {
       const array = getAccessibleRouteList(json);
-      console.log(`array is ${array}`);
       res.send(array);
     })
     .catch(console.error);
