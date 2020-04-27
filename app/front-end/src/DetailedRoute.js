@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './DetailedRoute.css';
 import { BrowserRouter as Link } from "react-router-dom";
-//import Async from 'react-async';
+
 const allStops = [];
 function DetailedRoute(){
   let [Stops, setStops] = useState([]);
