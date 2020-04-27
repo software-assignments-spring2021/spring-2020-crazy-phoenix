@@ -2,7 +2,6 @@ import React, {Component, useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import './HomePage.css';
 import { slide as Menu } from 'react-burger-menu'
-
 import PossibleRoutes from './possibleRoutes';
 
 import key from './config';
