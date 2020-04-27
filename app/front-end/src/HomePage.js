@@ -58,6 +58,7 @@ class HomePage extends Component{
           <div id ="To-text"> To</div>
           <input type = "text" name="destination" value={this.state.value} onChange={this.changeHandler}  style ={{width: 300}}/>
 
+
         </label>
         
         <input type="submit" style = {{marginLeft: 10}} value="GO" />
