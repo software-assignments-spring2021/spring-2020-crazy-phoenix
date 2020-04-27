@@ -38,11 +38,9 @@ function LoginForm(props){
           <h2>Welcome</h2>
           <h3>Sign In</h3>
           <form id='login' onSubmit={handleSubmit}>
-            Email  <input type='email' id='inputEmail' name='email' onChange={emailHandleChange}/><br/>
-            Password<input type='password' id='inputPassword' name='loginEmail' onChange={passwordHandleChange}/><br/>
-          <Link to='/Home'>
-          <input type='submit' value='Sign In'/>
-          </Link>
+            Email  <input type='text' id='inputEmail' name='email' onChange={emailHandleChange}/><br/>
+            Password<input type='text' id='inputPassword' name='loginEmail' onChange={passwordHandleChange}/><br/>
+            <input type='submit' value='Sign In'/>
           </form>
     
         </div>

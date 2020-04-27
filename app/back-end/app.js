@@ -71,23 +71,40 @@ app.get('/data', (req, res) => {
     .catch(console.error);
 });
 
-app.get('/authenticate', (req, res) => {/*
+app.get('/authenticate', (req, res) => {
   const email = req.query.email;
   const password = req.query.password;
-  req.body.email = email;
+  req.body.username = email;
   req.body.password = password;
   passport.authenticate('local', {}, (err, user, info) => {
     if (user) {
       res.send('authenticated');
     } else {
+      console.log(err);
       res.send('authentication failure');
     }
-  })(req, res);*/
-  res.send('authenticated');
+  })(req, res);
 });
 
 app.get('/signup', (req, res) => {
+  const firstname = req.query.firstname;
+  const lastname = req.query.lastname;
+  const email = req.query.email;
+  const password = req.query.password;
 
+  User.register(new User({
+    username: email,
+    email: email,
+    firstname: firstname,
+    lastname: lastname
+  }), password, (err, user) => {
+    if (err) {
+      console.log(err);
+      res.send('error');
+    } else {
+      res.send('added');
+    }
+  });
 });
 
 
