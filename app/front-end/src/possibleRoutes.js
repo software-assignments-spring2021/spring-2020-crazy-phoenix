@@ -1,10 +1,10 @@
 import React, {Component, useState, useEffect} from 'react';
 import './possibleRoutes.css';
-import {SearchBox, ORIGIN, DESTINATION} from './HomePage';
+import { ORIGIN, DESTINATION} from './HomePage';
 import {Link} from "react-router-dom";
-import {DetailedRoute} from './DetailedRoute';
-
-
+import DetailedRoute from './DetailedRoute';
+import queryString from 'querystring';
+import Redirect from "react-router-dom/es/Redirect";
 
 const getRoute = () => {
   const possibleRoutes = [];
@@ -27,9 +27,6 @@ const getRoute = () => {
   return possibleRoutes;
 };
 
-
-const ROUTES = [['1', '2', '3'], ['A', 'N', 'Q']];
-
 const addArrows = (route) => {
   const newArray = ['->'];
   for (let i = 0; i < route.length; i++) {
@@ -44,20 +41,31 @@ const addArrows = (route) => {
 
 const possibleRoutes = getRoute();
 
-
-
-
-
-
-
+let routes = [];
+const callApi = (origin, destination) => {
+  const url = `http://localhost:3000/data/?origin=${origin}&destination=${destination}`;
+  fetch(url)
+    .then(res => res.json())
+    .then(json => {
+      routes = json;
+      console.log(routes);
+    })
+    .catch(err => err);
+};
 
 const PossibleRoutes = (props) => {
+  // get origin and destination from /home
+  console.log(props.location);
+  const rawString = props.location.search;
+  const str = queryString.parse(rawString);
+  const origin = str['?origin'];
+  const destination = str.destination;
+
+  //query back-end
+  callApi(origin, destination);
+  /*
   const [data, setData] = useState([]);
   useEffect(() => {
-
-
-    //const subwayLines = ['1', '2', '3', '4', '5', '6', '7', 'A', 'C', 'E', 'B', 'D', 'F', 'M', 'G', 'N', 'Q', 'R', 'J', 'Z', 'L', 'S', 'G'];
-    //setData(subwayLines);
     const routes = [];
     if (props.origin && props.origin.length>0) {
       routes.push(props.origin);
@@ -74,23 +82,30 @@ const PossibleRoutes = (props) => {
 
     setData(routes);
   }, []);
+*/
+  const handleClick = (event) => {
+    const detailedRoute = event.target.name;
+    props.action(detailedRoute);
+  };
+
+  const handleClickButton = (event) => {
+    props.action(routes[0]);
+  }
 
   return (
     <div className="possibleRoutes">
-      <SearchBox/>
+      <Link to="/Home">&#60;</Link>
+      
       <h1>possible routes</h1>
       <section className="content">
-        {data.map(route => (
+        {routes/*.map(route => (
           <section className="route">Origin {route} Destination
-            <Link to="/Route">select</Link>
+            <button name={route} onClick={handleClick}>select</button>
           </section>
-
-          // link to route details page
-
-        ))}
-
-
+        ))*/}
       </section>
+      <Link to='/Route' detailedRoute={routes}>transfer data</Link>
+      <button onClick={handleClickButton}>transfer data</button>
     </div>
   );
 };

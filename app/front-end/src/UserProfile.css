@@ -1,0 +1,30 @@
+.drawer{
+    height: 100%;
+    background:rgb(202, 182, 115);
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 400px;
+}
+
+.drawer ul{
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+}
+
+.drawer li{
+    margin: 0.5rem 0;
+}
+
+.drawer a:hover,
+.drawer a:active{
+    color:red;
+}
+.drawer a{
+    color: orange;
+    text-decoration: none;
+
+
+}

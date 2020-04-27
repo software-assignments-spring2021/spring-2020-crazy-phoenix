@@ -1,0 +1,19 @@
+import React from 'react';
+import {withRouter} from 'react-router';
+import HomePage from "./HomePage";
+
+const HomePageContainer = (props) => {
+  //console.log(props.origin);
+  const origin = props.origin;
+  const destination = props.destination;
+  const change = (origin, destination) => {
+    const searchString = `?origin=${origin}&destination=${destination}`;
+    props.history.push({
+      pathname: '/possibleRoutes',
+      search: searchString
+    });
+  }
+  return (<HomePage origin={origin} destination={destination} action={change}/>);
+};
+
+export default withRouter(HomePageContainer);
