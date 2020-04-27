@@ -122,3 +122,4 @@ typings/
 *~
 
 back-end/config.json
+front-end/src/config.js
