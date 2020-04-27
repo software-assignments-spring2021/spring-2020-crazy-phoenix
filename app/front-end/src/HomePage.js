@@ -17,26 +17,11 @@ const destinationHandleChange = (e) => {
   destination = e.target.value;
 };
 
-
 function HomePage(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('clicked');
     props.action(origin, destination);
-/*
-    const fetchUrl = `http://localhost:3000/data/?origin=${origin}&destination=${destination}`;
-    fetch(fetchUrl)
-      .then(res => res.text())
-      .then(res => {
-        console.log(res);
-        if (res !== null) {
-          props.action();
-          props.origin = 'hey';
-        } else {
-          alert('error fetching api');
-        }
-      })
-      .catch(err => err);*/
   };
 
   return (

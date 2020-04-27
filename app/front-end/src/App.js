@@ -50,7 +50,7 @@ function App(props) {
             <DetailedRoute/>
           </Route>
 
-          <Route path="/possibleRoutes" render={() => <PossibleRoutesContainer/>}>
+          <Route path="/possibleRoutes" component={PossibleRoutes}>
           </Route>
         </Switch>
       </Router>

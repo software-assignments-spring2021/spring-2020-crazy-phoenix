@@ -3,6 +3,8 @@ import './possibleRoutes.css';
 import { ORIGIN, DESTINATION} from './HomePage';
 import {Link} from "react-router-dom";
 import DetailedRoute from './DetailedRoute';
+import queryString from 'querystring';
+import Redirect from "react-router-dom/es/Redirect";
 
 const getRoute = () => {
   const possibleRoutes = [];
@@ -39,7 +41,29 @@ const addArrows = (route) => {
 
 const possibleRoutes = getRoute();
 
+let routes = [];
+const callApi = (origin, destination) => {
+  const url = `http://localhost:3000/data/?origin=${origin}&destination=${destination}`;
+  fetch(url)
+    .then(res => res.json())
+    .then(json => {
+      routes = json;
+      console.log(routes);
+    })
+    .catch(err => err);
+};
+
 const PossibleRoutes = (props) => {
+  // get origin and destination from /home
+  console.log(props.location);
+  const rawString = props.location.search;
+  const str = queryString.parse(rawString);
+  const origin = str['?origin'];
+  const destination = str.destination;
+
+  //query back-end
+  callApi(origin, destination);
+  /*
   const [data, setData] = useState([]);
   useEffect(() => {
     const routes = [];
@@ -58,10 +82,15 @@ const PossibleRoutes = (props) => {
 
     setData(routes);
   }, []);
-
+*/
   const handleClick = (event) => {
-
+    const detailedRoute = event.target.name;
+    props.action(detailedRoute);
   };
+
+  const handleClickButton = (event) => {
+    props.action(routes[0]);
+  }
 
   return (
     <div className="possibleRoutes">
@@ -69,12 +98,14 @@ const PossibleRoutes = (props) => {
       
       <h1>possible routes</h1>
       <section className="content">
-        {data.map(route => (
+        {routes/*.map(route => (
           <section className="route">Origin {route} Destination
-            <button>select</button>
+            <button name={route} onClick={handleClick}>select</button>
           </section>
-        ))}
+        ))*/}
       </section>
+      <Link to='/Route' detailedRoute={routes}>transfer data</Link>
+      <button onClick={handleClickButton}>transfer data</button>
     </div>
   );
 };

@@ -7,8 +7,6 @@ const HomePageContainer = (props) => {
   const origin = props.origin;
   const destination = props.destination;
   const change = (origin, destination) => {
-
-    console.log(`origin is: ${origin}`);
     const searchString = `?origin=${origin}&destination=${destination}`;
     props.history.push({
       pathname: '/possibleRoutes',
