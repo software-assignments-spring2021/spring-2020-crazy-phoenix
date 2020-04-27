@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignupForm from './SignUp.js';
 import LoginForm from './Login.js';
-import {HomePage} from './HomePage.js';
+import HomePage from './HomePage.js';
 import DetailedRoute from './DetailedRoute.js';
 import Profile from './UserProfile.js';
 import PossibleRoutes from './possibleRoutes';
@@ -10,6 +10,7 @@ import LoginContainer from './LoginContainer';
 import SignUpContainer from './SignUpContainer';
 import logo from './logo.svg';
 import './App.css';
+import HomePageContainer from "./HomePageContainer";
 
 /*
 class App extends Component {
@@ -69,13 +70,12 @@ function App(props) {
       <Router>
         <Switch>
 
-          <Route path = "/Home">
-            <HomePage/>
+          <Route path="/Home" render={() => <HomePageContainer origin={''} destination={''}/>}>
+
           </Route>
           <Route path="/Login" render={() => <LoginContainer isCorrect={false}/>}>
           </Route>
           <Route path="/SignUp" render={() => <SignUpContainer isFilled={false}/>}>
-            <SignupForm/>
           </Route>
           <Route path="/UserProfile">
             <Profile/>

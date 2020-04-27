@@ -44,12 +44,28 @@ mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (er
 // avoid deprecation warning for collection.ensureIndex
 mongoose.set('useCreateIndex', true);
 
+const replaceSpace = (location) => {
+  let newLocation = '';
+  for (let i = 0; i < location.length; i++) {
+    if (location.charAt(i) === ' ') {
+      newLocation += '+';
+    } else {
+      newLocation += location.charAt(i);
+    }
+  }
+  return newLocation;
+};
 
 app.get('/data', (req, res) => {
-  fetch(sampleUrl, {method: "Get"})
+  const origin = replaceSpace(req.query.origin);
+  const destination = replaceSpace(req.query.destination);
+  console.log(`origin=${origin}`)
+  const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination},+New+York,+NY&mode=transit&alternatives=true&key=${apiKey}`;
+  fetch(url, {method: "Get"})
     .then(res => res.json())
     .then((json) => {
       const array = getAccessibleRouteList(json);
+      console.log(`array is ${array}`);
       res.send(array);
     })
     .catch(console.error);
@@ -68,6 +84,10 @@ app.get('/authenticate', (req, res) => {/*
     }
   })(req, res);*/
   res.send('authenticated');
+});
+
+app.get('/signup', (req, res) => {
+
 });
 
 
