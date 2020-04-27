@@ -1,6 +1,5 @@
 import React from 'react';
 import {withRouter} from 'react-router';
-import Login from "./Login";
 import HomePage from "./HomePage";
 
 const HomePageContainer = (props) => {

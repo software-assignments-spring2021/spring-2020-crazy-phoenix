@@ -11,10 +11,8 @@ import SignUpContainer from './SignUpContainer';
 import logo from './logo.svg';
 import './App.css';
 import HomePageContainer from "./HomePageContainer";
-
+import PossibleRoutesContainer from './PossibleRoutesContainer';
 /*
-class App extends Component {
-
     state = {
       hamburgerOpen: false
     };
@@ -28,41 +26,8 @@ class App extends Component {
     let hamburger;
     if(this.state.hamburgerOpen){
       hamburger = <Profile hamburgerHandler={this.hamburgerHandler}/>;
-    }
-    return (
-      <div className="App">
-      <Router>
-      <Switch>
+    }*/
 
-        <Route path = "/Home">
-          <HomePage></HomePage>
-        </Route>
-        <Route path="/Login" render={() => <LoginContainer isCorrect={false}/>}>
-          <LoginForm hamburgerHandler={this.hamburgerHandler}/>
-          {hamburger}
-        </Route>
-        <Route path="/SignUp" render={() => <SignUpContainer isFilled={false}/>}>
-          <SignupForm/> 
-        </Route>
-        <Route path="/UserProfile">
-          <Profile/> 
-        </Route>
-      
-
-        <Route path = "/Route">
-          <DetailedRoute></DetailedRoute>
-        </Route>
-
-        <Route path="/possibleRoutes">
-          <PossibleRoutes/>
-        </Route>
-      </Switch>
-      </Router>
-                
-      </div>
-    );
-    }
-}*/
 
 function App(props) {
   return (
@@ -71,7 +36,6 @@ function App(props) {
         <Switch>
 
           <Route path="/Home" render={() => <HomePageContainer origin={''} destination={''}/>}>
-
           </Route>
           <Route path="/Login" render={() => <LoginContainer isCorrect={false}/>}>
           </Route>
@@ -86,8 +50,7 @@ function App(props) {
             <DetailedRoute/>
           </Route>
 
-          <Route path="/possibleRoutes">
-            <PossibleRoutes/>
+          <Route path="/possibleRoutes" render={() => <PossibleRoutesContainer/>}>
           </Route>
         </Switch>
       </Router>

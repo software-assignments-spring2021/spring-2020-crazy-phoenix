@@ -2,7 +2,7 @@ import React, {Component, useState, useEffect} from 'react';
 import './possibleRoutes.css';
 import { ORIGIN, DESTINATION} from './HomePage';
 import {Link} from "react-router-dom";
-import {DetailedRoute} from './DetailedRoute';
+import DetailedRoute from './DetailedRoute';
 
 const getRoute = () => {
   const possibleRoutes = [];
@@ -59,6 +59,10 @@ const PossibleRoutes = (props) => {
     setData(routes);
   }, []);
 
+  const handleClick = (event) => {
+
+  };
+
   return (
     <div className="possibleRoutes">
       <Link to="/Home">&#60;</Link>
@@ -67,7 +71,7 @@ const PossibleRoutes = (props) => {
       <section className="content">
         {data.map(route => (
           <section className="route">Origin {route} Destination
-            <Link to="/Route">select</Link>
+            <button>select</button>
           </section>
         ))}
       </section>
