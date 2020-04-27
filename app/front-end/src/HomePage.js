@@ -17,8 +17,16 @@ class HomePage extends Component{
   }
 
   changeHandler = (e) =>{
-    e.target.value.replace(/ /g,'+'); 
-    this.setState({ [e.target.name]: e.target.value})
+      const value = e.target.value;
+      this.setState({
+        //...state,
+        [e.target.name]: value
+      });
+  
+      console.log("hello");
+    
+    // e.target.value.replace(/ /g,'+'); 
+    // this.setState({ [e.target.name]: e.target.value})
   }
 
   submitHandler = (e) => {
@@ -45,11 +53,11 @@ class HomePage extends Component{
           <form onSubmit = {this.submitHandler} className = "Search-form">
         <label id = "From-bar">
           <div id = "From-text">From</div>
-          <input name="origin" value={origin} onChange={this.changeHandler} type = "text" style ={{width: 300}}/>
+          <input type = "text" name="origin" value={this.state.origin} onChange={this.changeHandler}  style ={{width: 300}}/>
         </label>
         <label id = "To-bar">
           <div id ="To-text"> To</div>
-          <input name="destination" value={destination} onChange={this.changeHandler} type = "text" style ={{width: 300}}/>
+          <input type = "text" name="destination" value={this.state.destination} onChange={this.changeHandler}  style ={{width: 300}}/>
 
         </label>
 
