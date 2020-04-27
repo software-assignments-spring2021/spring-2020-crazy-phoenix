@@ -6,6 +6,7 @@ import {HomePage} from './HomePage.js';
 import DetailedRoute from './DetailedRoute.js';
 import Profile from './UserProfile.js';
 import PossibleRoutes from './possibleRoutes';
+import Container from './Container';
 import logo from './logo.svg';
 import './App.css';
 
@@ -30,7 +31,7 @@ class App extends Component {
       <Switch>
         {/* <header className="App-header"> */}
         
-        <Route path="/Login">
+        <Route path="/Login" render={() => <Container isCorrect={false}/>}>
           <LoginForm hamburgerHandler={this.hamburgerHandler}/>
           {hamburger}
         </Route>
