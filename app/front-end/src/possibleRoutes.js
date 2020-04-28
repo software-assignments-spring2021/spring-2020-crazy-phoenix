@@ -39,57 +39,18 @@ const addArrows = (route) => {
   return newArray;
 };
 
-const possibleRoutes = getRoute();
-
-let routes = [];
-const callApi = (origin, destination) => {
-  const url = `http://localhost:3000/data/?origin=${origin}&destination=${destination}`;
-  fetch(url)
-    .then(res => res.json())
-    .then(json => {
-      routes = json;
-      console.log(routes);
-    })
-    .catch(err => err);
-};
-
 const PossibleRoutes = (props) => {
   // get origin and destination from /home
-  console.log(props.location);
-  const rawString = props.location.search;
-  const str = queryString.parse(rawString);
-  const origin = str['?origin'];
-  const destination = str.destination;
 
-  //query back-end
-  callApi(origin, destination);
-  /*
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const routes = [];
-    if (props.origin && props.origin.length>0) {
-      routes.push(props.origin);
-    }
-
-    for (let i = 0; i < possibleRoutes.length; i++) {
-      const newRoute = addArrows(possibleRoutes[i]);
-      routes.push(newRoute);
-    }
-
-    if (props.destination && props.destination.length>0) {
-      routes.push(props.destination);
-    }
-
-    setData(routes);
-  }, []);
-*/
+  const routes = props.location.state;
   const handleClick = (event) => {
     const detailedRoute = event.target.name;
     props.action(detailedRoute);
   };
 
   const handleClickButton = (event) => {
-    props.action(routes[0]);
+    //props.action(routes[0]);
+    console.log(routes);
   }
 
   return (
@@ -98,13 +59,17 @@ const PossibleRoutes = (props) => {
       
       <h1>possible routes</h1>
       <section className="content">
-        {routes/*.map(route => (
+        {/*routes.routes.map(route => (
           <section className="route">Origin {route} Destination
             <button name={route} onClick={handleClick}>select</button>
           </section>
         ))*/}
       </section>
-      <Link to='/Route' detailedRoute={routes}>transfer data</Link>
+      <Link to={{
+        pathname: '/Route',
+        state: {routes: props.location.state}
+      }}>data transfer</Link>
+      <Link to='/Route' detailedRoute={routes} onClick={handleClickButton}>transfer data</Link>
       <button onClick={handleClickButton}>transfer data</button>
     </div>
   );

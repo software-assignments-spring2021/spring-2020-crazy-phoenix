@@ -46,8 +46,7 @@ function App(props) {
           </Route>
 
 
-          <Route path = "/Route">
-            <DetailedRoute/>
+          <Route path = "/Route" component={DetailedRoute}>
           </Route>
 
           <Route path="/possibleRoutes" component={PossibleRoutes}>
