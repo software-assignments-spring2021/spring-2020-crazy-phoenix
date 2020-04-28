@@ -11,9 +11,11 @@ Our MVP will consist of the following main features:
 * Route generation
 * Route selection
 
-# to run
-localhost:3000/Login
-
+# To Run
+1. cd to app/back-end and run node server.js
+2. In a separate terminal, cd to app/front-end and run npm start.
+3. When asked if you want to run on another port, enter y. This should start up the front-end on localhost:3001.
+4. Go to localhost:3001/Login to begin.
 
 # Project History
 This project was originally proposed by Ayako after thinking about how Google Maps was not sufficient for people with disabilities. 
