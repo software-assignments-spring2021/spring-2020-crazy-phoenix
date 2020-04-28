@@ -2,7 +2,9 @@ import React, {Component, useState, useEffect} from 'react';
 import './possibleRoutes.css';
 import { ORIGIN, DESTINATION} from './HomePage';
 import {Link} from "react-router-dom";
-import {DetailedRoute} from './DetailedRoute';
+import DetailedRoute from './DetailedRoute';
+import queryString from 'querystring';
+import Redirect from "react-router-dom/es/Redirect";
 
 const getRoute = () => {
   const possibleRoutes = [];
@@ -37,27 +39,43 @@ const addArrows = (route) => {
   return newArray;
 };
 
-const possibleRoutes = getRoute();
-
 const PossibleRoutes = (props) => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const routes = [];
-    if (props.origin && props.origin.length>0) {
-      routes.push(props.origin);
-    }
+  // get origin and destination from /home
 
-    for (let i = 0; i < possibleRoutes.length; i++) {
-      const newRoute = addArrows(possibleRoutes[i]);
-      routes.push(newRoute);
-    }
+  const routes = props.location.state;
+  const handleClick = (event) => {
+    const detailedRoute = event.target.name;
+    props.action(detailedRoute);
+  };
 
-    if (props.destination && props.destination.length>0) {
-      routes.push(props.destination);
-    }
+  const handleClickButton = (event) => {
+    //props.action(routes[0]);
+    console.log(routes);
+  }
+  const finalRoutesList = [];
 
-    setData(routes);
-  }, []);
+  const routesList = routes.routes;
+  for (let i = 0; i < routesList.length; i++) {
+    const legs = routesList[i].legs;
+
+    let routePath = '';
+    for (let j = 0; j < legs.length; j++) {
+      const steps = legs[j].steps;
+      for (let k = 0; k < steps.length; k++) {
+        if (steps[k].travel_mode === 'TRANSIT') {
+          routePath += steps[k].transit_details.arrival_stop.name;
+          routePath += ' subway ---> ';
+          routePath += steps[k].transit_details.departure_stop.name;
+        } else {
+          routePath += steps[k].travel_mode;
+        }
+        routePath += '->';
+      }
+    }
+    finalRoutesList.push(routePath);
+  }
+  console.log(finalRoutesList);
+
 
   return (
     <div className="possibleRoutes">
@@ -65,12 +83,18 @@ const PossibleRoutes = (props) => {
       
       <h1>possible routes</h1>
       <section className="content">
-        {data.map(route => (
-          <section className="route">Origin {route} Destination
-            <Link to="/Route">select</Link>
+        {finalRoutesList.map(route => (
+          <section className="route">{route}
+            <button name={route} onClick={handleClickButton}>select</button>
           </section>
         ))}
       </section>
+      <Link to={{
+        pathname: '/Route',
+        state: {routes: props.location.state}
+      }}>data transfer</Link>
+      <Link to='/Route' detailedRoute={routes} onClick={handleClickButton}>transfer data</Link>
+      <button onClick={handleClickButton}>transfer data</button>
     </div>
   );
 };

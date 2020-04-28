@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './DetailedRoute.css';
 import { BrowserRouter as Link } from "react-router-dom";
-//import Async from 'react-async';
+
 const allStops = [];
-function DetailedRoute(){
+function DetailedRoute(props){
+  console.log(props.location);
+  /*
   let [Stops, setStops] = useState([]);
   const load = () =>{
     fetch('http://localhost:3000/data', {
@@ -13,7 +15,7 @@ function DetailedRoute(){
     .then((data) =>{
 
    
-    /*const depStop = data[i].transit_details.departure_stop.name;
+    const depStop = data[i].transit_details.departure_stop.name;
     const arrStop = data[0].transit_details.arrival_stop.name;
     const depStop1 = data[1].transit_details.departure_stop.name;
     const arrStop1 = data[1].transit_details.arrival_stop.name;
@@ -23,7 +25,7 @@ function DetailedRoute(){
     const a = <div className = "Stop">{arrStop}</div>
     const o = <div className = "Stop1">{depStop1}</div>
     const m = <img src = "DownArrow.png" alt = "Down arrow" className = "Arrow"/>
-    const g = <div className = "Stop1">{arrStop1}</div>*/
+    const g = <div className = "Stop1">{arrStop1}</div>
     //setStops([d,f,a,o,m,g]);
     //const allStops = []; 
     //const allStops = [];
@@ -44,6 +46,7 @@ function DetailedRoute(){
     });
   }
     load();
+  */
     
     return(
         <div>
@@ -51,7 +54,7 @@ function DetailedRoute(){
             <button type ="button">Back</button>
           </Link>
         <div className = "Stops">
-          {Stops}
+          {/*Stops*/}
         </div>
         </div>
     )
