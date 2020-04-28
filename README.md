@@ -19,7 +19,6 @@ localhost:3000/Login<br>
 This should direct you to a login page. Create account (by clicking on the create account page), then login.
 
 
-
 # Project History
 This project was originally proposed by Ayako after thinking about how Google Maps was not sufficient for people with disabilities. 
 Our team decided on this project because we thought it would lead to an interesting and useful finished product within the timeframe 
