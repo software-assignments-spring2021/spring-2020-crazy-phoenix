@@ -4,58 +4,49 @@ import { BrowserRouter as Link } from "react-router-dom";
 
 const allStops = [];
 function DetailedRoute(props){
-  console.log(props.detailedRoute);
   console.log(props.location);
-  /*
-  let [Stops, setStops] = useState([]);
-  const load = () =>{
-    fetch('http://localhost:3000/data', {
-    credentials: 'include',
-  })
-    .then((res) => res.json())
-    .then((data) =>{
 
-   
-    const depStop = data[i].transit_details.departure_stop.name;
-    const arrStop = data[0].transit_details.arrival_stop.name;
-    const depStop1 = data[1].transit_details.departure_stop.name;
-    const arrStop1 = data[1].transit_details.arrival_stop.name;
-
-    const d = <div className = "Stop">{depStop}</div>
-    const f = <img src = "DownArrow.png" alt = "Down arrow" className = "Arrow"/>
-    const a = <div className = "Stop">{arrStop}</div>
-    const o = <div className = "Stop1">{depStop1}</div>
-    const m = <img src = "DownArrow.png" alt = "Down arrow" className = "Arrow"/>
-    const g = <div className = "Stop1">{arrStop1}</div>
-    //setStops([d,f,a,o,m,g]);
-    //const allStops = []; 
-    //const allStops = [];
-    for(let j = 0; j < data.length; j++ ){
-      const depStop = data[j].transit_details.departure_stop.name;
-      allStops.push(depStop);
+  const ourRoute = props.location.state.routes.routes[0].legs[0];
+  console.log(ourRoute);
+  let displayStops = []
+  for (let i=0; i <ourRoute.steps.length; i++){
+    if (ourRoute.steps[i].travel_mode == "TRANSIT"){
+      if (i>0){
+        displayStops.push(<img src = "DownArrow.png" alt = "Down arrow" className = "Arrow"/>);
+      }
+      console.log("yessir");
+      const depStop = ourRoute.steps[i].transit_details.departure_stop.name;
+      const arrStop = ourRoute.steps[i].transit_details.arrival_stop.name;
+      const d = <div className = "Stop">{depStop}</div>
+      const iconUrl = ourRoute.steps[i].transit_details.line.icon;
+      const l = <img src = {iconUrl} />
+      //const l = <div>{ourRoute.steps[i].transit_details.line.name}</div>
+      const f = <img src = "DownArrow.png" alt = "Down arrow" className = "Arrow"/>
+      const a = <div className = "Stop">{arrStop}</div>
+      displayStops.push(d,l,f,a);
     }
-    const displayStops = allStops.map((stop) => 
-    <div>
-      <div className = "Stop">{stop}</div>
-    </div>
-    );
- 
-    //const allStops
-    //const lengthh = [1,3,4];
-    setStops(displayStops);
+    else if(ourRoute.steps[i].travel_mode == "WALKING"){
+      if (i < ourRoute.steps.length -1){
+      const w = <div className = "Stop">Walk to</div>
+      displayStops.push(w);
+      }
+      else{
+        const f = <img src = "DownArrow.png" alt = "Down arrow" className = "Arrow"/>
+        const w = <div className = "Stop">Arrive at Destination</div>
+        displayStops.push(f,w);
+      }
+      
+    }
 
-    });
   }
-    load();
-  */
-    
+
     return(
         <div>
           <Link to ="/possibleRoutes">
             <button type ="button">Back</button>
           </Link>
         <div className = "Stops">
-          {/*Stops*/}
+          {displayStops}
         </div>
         </div>
     )
