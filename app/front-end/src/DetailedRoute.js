@@ -4,7 +4,6 @@ import { BrowserRouter as Link } from "react-router-dom";
 
 const allStops = [];
 function DetailedRoute(props){
-  console.log(props.detailedRoute);
   console.log(props.location);
   /*
   let [Stops, setStops] = useState([]);

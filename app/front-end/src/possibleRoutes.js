@@ -52,6 +52,30 @@ const PossibleRoutes = (props) => {
     //props.action(routes[0]);
     console.log(routes);
   }
+  const finalRoutesList = [];
+
+  const routesList = routes.routes;
+  for (let i = 0; i < routesList.length; i++) {
+    const legs = routesList[i].legs;
+
+    let routePath = '';
+    for (let j = 0; j < legs.length; j++) {
+      const steps = legs[j].steps;
+      for (let k = 0; k < steps.length; k++) {
+        if (steps[k].travel_mode === 'TRANSIT') {
+          routePath += steps[k].transit_details.arrival_stop.name;
+          routePath += ' subway ---> ';
+          routePath += steps[k].transit_details.departure_stop.name;
+        } else {
+          routePath += steps[k].travel_mode;
+        }
+        routePath += '->';
+      }
+    }
+    finalRoutesList.push(routePath);
+  }
+  console.log(finalRoutesList);
+
 
   return (
     <div className="possibleRoutes">
@@ -59,11 +83,11 @@ const PossibleRoutes = (props) => {
       
       <h1>possible routes</h1>
       <section className="content">
-        {/*routes.routes.map(route => (
-          <section className="route">Origin {route} Destination
-            <button name={route} onClick={handleClick}>select</button>
+        {finalRoutesList.map(route => (
+          <section className="route">{route}
+            <button name={route} onClick={handleClickButton}>select</button>
           </section>
-        ))*/}
+        ))}
       </section>
       <Link to={{
         pathname: '/Route',
