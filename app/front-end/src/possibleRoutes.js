@@ -85,7 +85,7 @@ const PossibleRoutes = (props) => {
       <section className="content">
         {finalRoutesList.map(route => (
           <section className="route">{route}
-            <button name={route} onClick={handleClickButton}>select</button>
+           <Link to={{pathname: '/Route', state: {route}}}>select</Link>
           </section>
         ))}
       </section>
@@ -100,3 +100,5 @@ const PossibleRoutes = (props) => {
 };
 
 export default PossibleRoutes;
+
+// <button name={route} onClick={handleClickButton}>select</button>
