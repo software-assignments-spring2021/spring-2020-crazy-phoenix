@@ -26,8 +26,7 @@ function HomePage(props) {
 
   return (
     <div className = "map">
-      <Menu id = "Burger">
-      </Menu>
+   
       <form onSubmit={handleSubmit} className = "Search-form">
         <label id = "From-bar">
           <div id = "From-text">From</div>
