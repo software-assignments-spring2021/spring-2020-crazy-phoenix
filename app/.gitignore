@@ -123,4 +123,5 @@ typings/
 
 back-end/config.json
 back-end/test/stubRoute.json
+back-end/test/stubRoute2.json
 front-end/src/config.js

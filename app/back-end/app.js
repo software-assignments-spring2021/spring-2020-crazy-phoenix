@@ -77,11 +77,7 @@ app.get('/authenticate', (req, res) => {
   passport.authenticate('local', {}, (err, user, info) => {
     if (user) {
       res.send('authenticated');
-      User.findOneAndDelete({username: email}, (err, doc) => {
-        console.log(doc);
-      });
     } else {
-      console.log(err);
       res.send('authentication failure');
     }
   })(req, res);
@@ -100,7 +96,6 @@ app.get('/signup', (req, res) => {
     lastname: lastname
   }), password, (err, user) => {
     if (err) {
-      console.log(err);
       res.send('error');
     } else {
       res.send('added');
@@ -109,4 +104,7 @@ app.get('/signup', (req, res) => {
 });
 
 
-module.exports = app;
+module.exports = {
+  app: app,
+  replaceSpace: replaceSpace
+};
