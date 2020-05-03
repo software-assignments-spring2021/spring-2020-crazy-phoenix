@@ -53,11 +53,19 @@ class App extends Component{
         <Router>
           <Switch>
   
-            <Route path="/Home" render={() => <div> <HomePageContainer origin={''} destination={''} hamburgerHandler={this.hamburgerHandler}/> {hamburger}</div>}/>
-            
-            <Route path="/Login" render={() => <LoginContainer isCorrect={false}/>}>
+            <Route path="/Home">
+              <div>
+              <HomePageContainer origin={''} destination={''} hamburgerHandler={this.hamburgerHandler}/>
+              {hamburger}
+              </div>}
             </Route>
-            <Route path="/SignUp" render={() => <SignUpContainer isFilled={false}/>}>
+            
+            <Route path="/Login" >
+            <LoginContainer isCorrect={false}/>
+            </Route>
+
+            <Route path="/SignUp">
+            <SignUpContainer isFilled={false}/>
             </Route>
             <Route path="/UserProfile">
               <Profile/>
