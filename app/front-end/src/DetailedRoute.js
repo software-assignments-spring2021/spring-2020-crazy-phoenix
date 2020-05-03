@@ -4,9 +4,10 @@ import { BrowserRouter as Link } from "react-router-dom";
 
 const allStops = [];
 function DetailedRoute(props){
-  console.log(props.location);
+  console.log(`received: ${props.location.state}    show: ${JSON.stringify(props.location.state)}`);
+  const object = JSON.parse(props.location.state);
 
-  const ourRoute = props.location.state.routes.routes[0].legs[0];
+  const ourRoute = object.routes[0].legs[0];
   console.log(ourRoute);
   let displayStops = []
   for (let i=0; i <ourRoute.steps.length; i++){
