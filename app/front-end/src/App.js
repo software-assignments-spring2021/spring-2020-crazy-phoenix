@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignupForm from './SignUp.js';
 import LoginForm from './Login.js';
@@ -27,35 +27,55 @@ import PossibleRoutesContainer from './PossibleRoutesContainer';
     if(this.state.hamburgerOpen){
       hamburger = <Profile hamburgerHandler={this.hamburgerHandler}/>;
     }*/
+    
 
+class App extends Component{
+  
+  state = {
+    hamburgerOpen: false 
+  };
 
-function App(props) {
-  return (
-    <div className="App">
-      <Router>
-        <Switch>
+  hamburgerHandler = () => {
+    this.setState((prevState) => {
+      return {hamburgerOpen: !prevState.hamburgerOpen};
+    });
+  };
+  
+  render(){
+    let hamburger;
 
-          <Route path="/Home" render={() => <HomePageContainer origin={''} destination={''}/>}>
-          </Route>
-          <Route path="/Login" render={() => <LoginContainer isCorrect={false}/>}>
-          </Route>
-          <Route path="/SignUp" render={() => <SignUpContainer isFilled={false}/>}>
-          </Route>
-          <Route path="/UserProfile">
-            <Profile/>
-          </Route>
-
-
-          <Route path = "/Route" component={DetailedRoute}>
-          </Route>
-
-          <Route path="/possibleRoutes" component={PossibleRoutes}>
-          </Route>
-        </Switch>
-      </Router>
-
-    </div>
-  );
+    if(this.state.hamburgerOpen){
+      hamburger = <Profile hamburgerHanlder={this.hamburgerHandler}/>
+    }
+    return (
+      <div className="App">
+        <Router>
+          <Switch>
+  
+            <Route path="/Home" render={() => <HomePageContainer origin={''} destination={''} hamburgerHandler={this.hamburgerHandler}/>}>
+            {hamburger}
+            </Route>
+            <Route path="/Login" render={() => <LoginContainer isCorrect={false}/>}>
+            </Route>
+            <Route path="/SignUp" render={() => <SignUpContainer isFilled={false}/>}>
+            </Route>
+            <Route path="/UserProfile">
+              <Profile/>
+            </Route>
+  
+  
+            <Route path = "/Route" component={DetailedRoute}>
+            </Route>
+  
+            <Route path="/possibleRoutes" component={PossibleRoutes}>
+            </Route>
+          </Switch>
+        </Router>
+  
+      </div>
+    );
+  }
+  
 }
     
 export default App;

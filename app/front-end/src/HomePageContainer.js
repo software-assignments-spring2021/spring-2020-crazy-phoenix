@@ -1,6 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router';
 import HomePage from "./HomePage";
+import ToggleButton from'./ToggleButton.js'
 
 let routes = [];
 // query here back-end
@@ -37,7 +38,14 @@ const HomePageContainer = (props) => {
       .catch(err => err);
   }
 
-  return (<HomePage origin={origin} destination={destination} action={change}/>);
+  return (
+  <div>
+    <div className='hamburgerMenu'>
+      <ToggleButton click={props.hamburgerHandler}/>
+    </div>
+    <HomePage origin={origin} destination={destination} action={change}/>
+  </div>
+  );
 };
 
 export default withRouter(HomePageContainer);
