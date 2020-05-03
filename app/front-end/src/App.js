@@ -39,6 +39,7 @@ class App extends Component{
     this.setState((prevState) => {
       return {hamburgerOpen: !prevState.hamburgerOpen};
     });
+    alert("FUCK ME");
   };
   
   render(){
@@ -52,9 +53,8 @@ class App extends Component{
         <Router>
           <Switch>
   
-            <Route path="/Home" render={() => <HomePageContainer origin={''} destination={''} hamburgerHandler={this.hamburgerHandler}/>}>
-            {hamburger}
-            </Route>
+            <Route path="/Home" render={() => <div> <HomePageContainer origin={''} destination={''} hamburgerHandler={this.hamburgerHandler}/> {hamburger}</div>}/>
+            
             <Route path="/Login" render={() => <LoginContainer isCorrect={false}/>}>
             </Route>
             <Route path="/SignUp" render={() => <SignUpContainer isFilled={false}/>}>
