@@ -1,10 +1,7 @@
 import React, {Component, useState, useEffect} from 'react';
 import './possibleRoutes.css';
-import { ORIGIN, DESTINATION} from './HomePage';
 import {Link} from "react-router-dom";
-import DetailedRoute from './DetailedRoute';
-import queryString from 'querystring';
-import Redirect from "react-router-dom/es/Redirect";
+import { Redirect } from "react-router-dom"
 
 // return string of route to display
 const getShortRoute = (routeObjectString) => { console.log(routeObjectString);
