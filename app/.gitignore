@@ -75,7 +75,7 @@ build/Release
 
 # Dependency directories
 node_modules/
-**/node_modules/
+**/node_modules
 jspm_packages/
 **/jspm_packages
 
@@ -120,3 +120,6 @@ typings/
 
 ## Emacs artefacts ##
 *~
+
+back-end/config.json
+front-end/src/config.js

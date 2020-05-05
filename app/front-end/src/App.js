@@ -1,56 +1,61 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import SignupForm from './SignUp.js';
+import LoginForm from './Login.js';
+import HomePage from './HomePage.js';
+import DetailedRoute from './DetailedRoute.js';
+import Profile from './UserProfile.js';
+import PossibleRoutes from './possibleRoutes';
+import LoginContainer from './LoginContainer';
+import SignUpContainer from './SignUpContainer';
 import logo from './logo.svg';
 import './App.css';
+import HomePageContainer from "./HomePageContainer";
+import PossibleRoutesContainer from './PossibleRoutesContainer';
+/*
+    state = {
+      hamburgerOpen: false
+    };
+    hamburgerHandler = () => {
+      this.setState((prevState) => {
+        return {hamburgerOpen: !prevState.hamburgerOpen};
+      });
+    };
 
-function App() {
+    render(){
+    let hamburger;
+    if(this.state.hamburgerOpen){
+      hamburger = <Profile hamburgerHandler={this.hamburgerHandler}/>;
+    }*/
+
+
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <p className="back_icon">&#60;</p>
+      <Router>
+        <Switch>
 
-        <div className="query_box">
-          <input type="text"/>
-          <input type="text"/>
-        </div>
+          <Route path="/Home" render={() => <HomePageContainer origin={''} destination={''}/>}>
+          </Route>
+          <Route path="/Login" render={() => <LoginContainer isCorrect={false}/>}>
+          </Route>
+          <Route path="/SignUp" render={() => <SignUpContainer isFilled={false}/>}>
+          </Route>
+          <Route path="/UserProfile">
+            <Profile/>
+          </Route>
 
-        <div className="search">
-          <input type="submit" value="GO"/>
-        </div>
 
+          <Route path = "/Route" component={DetailedRoute}>
+          </Route>
 
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
-      <div className="content">
-
-        <div className="route">
-          <p>direction with subway logos</p>
-          <a href="https://google.com" className="App-link">select</a>
-        </div>
-        <div className="route">
-          <p>direction with subway logos</p>
-          <a href="https://google.com" className="App-link">select</a>
-        </div>
-        <div className="route">
-          <p>direction with subway logos</p>
-          <a href="https://google.com" className="App-link">select</a>
-        </div>
-      </div>
-
-      <img src={logo} className="App-logo" alt="logo" />
+          <Route path="/possibleRoutes" component={PossibleRoutes}>
+          </Route>
+        </Switch>
+      </Router>
 
     </div>
   );
 }
-
+    
 export default App;
