@@ -18,7 +18,6 @@ const key = fs.readFileSync(fn);
 const conf = JSON.parse(key);
 //const apiKey = conf.API_KEY;
 const apiKey = process.env.API_KEY;
-//const sampleUrl = 'https://maps.googleapis.com/maps/api/directions/json?origin=Columbia+University&destination=Hudson+Yards,+New+York,+NY&mode=transit&alternatives=true&key='+apiKey;
 
 // schema
 const User = require('./db.js');
