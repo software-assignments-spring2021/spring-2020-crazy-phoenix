@@ -13,12 +13,11 @@ const LocalStrategy = require('passport-local').Strategy;
 
 app.use(cors({ origin: 'http://localhost:3001', credentials: true }));
 app.use(express.urlencoded({extended: false}));
-const fn = './config.json';
-const key = fs.readFileSync(fn);
-const conf = JSON.parse(key);
+//const fn = './config.json';
+//const key = fs.readFileSync(fn);
+//const conf = JSON.parse(key);
 //const apiKey = conf.API_KEY;
 const apiKey = process.env.API_KEY;
-//const sampleUrl = 'https://maps.googleapis.com/maps/api/directions/json?origin=Columbia+University&destination=Hudson+Yards,+New+York,+NY&mode=transit&alternatives=true&key='+apiKey;
 
 // schema
 const User = require('./db.js');
@@ -30,10 +29,10 @@ passport.deserializeUser(User.deserializeUser());
 
 
 // connecting to db
-//const DB_USER = process.env.DB_USER;
-//const DB_PASS = process.env.DB_PASS;
-//const DB_HOST = process.env.DB_HOST;
-const dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
+//const dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
+
+// for travis tests
+const dbUrl = 'mongodb://localhost/group_project';
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
   if (err) {
     console.log('Could not connect to database');
@@ -78,7 +77,6 @@ app.get('/authenticate', (req, res) => {
     if (user) {
       res.send('authenticated');
     } else {
-      console.log(err);
       res.send('authentication failure');
     }
   })(req, res);
@@ -97,7 +95,6 @@ app.get('/signup', (req, res) => {
     lastname: lastname
   }), password, (err, user) => {
     if (err) {
-      console.log(err);
       res.send('error');
     } else {
       res.send('added');
@@ -106,4 +103,7 @@ app.get('/signup', (req, res) => {
 });
 
 
-module.exports = app;
+module.exports = {
+  app: app,
+  replaceSpace: replaceSpace
+};
