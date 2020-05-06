@@ -1,7 +1,6 @@
 import React, {Component, useState, useEffect} from 'react';
 import './possibleRoutes.css';
 import {Link} from "react-router-dom";
-import { Redirect } from "react-router-dom"
 
 // return string of route to display
 const getShortRoute = (routeObjectString) => { console.log(routeObjectString);
@@ -13,14 +12,28 @@ const getShortRoute = (routeObjectString) => { console.log(routeObjectString);
     for (let k = 0; k < steps.length; k++) {
       if (steps[k].travel_mode === 'TRANSIT') {
         routePath += steps[k].transit_details.departure_stop.name;
+        routePath += "(" +steps[k].transit_details.departure_time.text+")";
         routePath += ' subway ---> ';
         routePath += steps[k].transit_details.arrival_stop.name;
+        routePath += "(" +steps[k].transit_details.arrival_time.text+")";
 
       } else {
         routePath += steps[k].travel_mode;
       }
       routePath += '->';
     }
+    //// Simplified display
+    
+    // routePath += "Starting Subway Stop";
+    // routePath += '->';
+    // routePath += steps[1].transit_details.departure_stop.name;
+    // routePath += "(" +steps[1].transit_details.departure_time.text+")";
+    // routePath += ' ---> ';
+    // routePath += steps[steps.length-2].transit_details.arrival_stop.name;
+    // routePath += "(" +steps[steps.length-2].transit_details.arrival_time.text+")";
+    // routePath += '->';
+    // routePath += "Ending Subway Stop";
+
   }
   return routePath;
 };
