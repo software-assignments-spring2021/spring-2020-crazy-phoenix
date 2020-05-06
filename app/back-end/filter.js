@@ -105,5 +105,7 @@ const getAccessibleRouteList = (rawData) => {
 };
 
 module.exports = {
-  getAccessibleRouteList: getAccessibleRouteList
+  getAccessibleRouteList: getAccessibleRouteList,
+  isAccessible: isAccessible,
+  filterRoutes: filterRoutes
 };
