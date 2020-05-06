@@ -12,9 +12,10 @@ const getShortRoute = (routeObjectString) => { console.log(routeObjectString);
     const steps = legs[j].steps;
     for (let k = 0; k < steps.length; k++) {
       if (steps[k].travel_mode === 'TRANSIT') {
-        routePath += steps[k].transit_details.arrival_stop.name;
-        routePath += ' subway ---> ';
         routePath += steps[k].transit_details.departure_stop.name;
+        routePath += ' subway ---> ';
+        routePath += steps[k].transit_details.arrival_stop.name;
+
       } else {
         routePath += steps[k].travel_mode;
       }
