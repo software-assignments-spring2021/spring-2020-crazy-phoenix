@@ -9,14 +9,17 @@ cache: npm
 install:
 - npm install
 before_script:
-  - sleep 15
-  - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
-
+- sleep 15
+- mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script:
-  - cd app/back-end
-  - npm install
-  - npm run test
-
+- cd app/back-end
+- npm install
+- npm run test
+after_success:
+- bash ./deploy_backend.sh
+- cd ../front-end
+- bash ./deploy_frontend.sh
 env:
   global:
-    - secure: IxFD8YhYZlvBYf+U5zoMRy3gv6lDINiEgqWUkfu9I9s2FmseqCuZLr7n7lkOwHNPcWkZN1jHUj/Kvrn60BxNO39DtapZtpK7YBIg7if1uMa4W/ZBWwJZKRpGayVDVGFPzHZFZhv7gEB8u0cwwuikSFk1erN7bDGTiILDPtZZjCN2TL/vrj2NWJeSErtV7TWATTUtCu8qjkKg4FR8VYs3eGTqic55upc+x7P0myQ3XdFQ+pAdUBRkOH7iJ6e52q2DmQkCfYs3O87/nnMQU5z0I0EHMy1RTkyL/Z+jgkd5wGBSyykhqX3y5T84h8H+KzEBpOc+R/m4ja2FAERqtOe2C+QXQaqoSfPI1CDMSuiLI0GVA2TSJmoYISdA09hk3vRl5w33fL0DxomfeqwrLJQM15O4SWV2hgBAsZLU65XcUMrq/UDPnp7I9xQKjMbGJ6d4mf4XYWSY73eT06YVCsZokKigjjOsh5RrX2eU2C9BEdRs+iIJ3QOgNojutYdIvTIP531hcChkyixNvl7luhwWPXnMGp4JB4yi5h4LsUvZFMzXflpVWhEUsTqgO2dg/k34MQ4ybloXWUiSMwNHSNKzngmyc/doP4ufzux63vcFIpBxG5jOkgOuDzpTwuK5w7Rp5VaZAkmUAnc7FJ8wytTa+s+0keB5ikQhsdxpu5kkIGg=
+  - secure: Ds3ZV5C8PD4cltmlQyV219Br5dmM6o8f+pr83k43yzEVbn/spgKeK3VLdxevuUkbUWVh5DSCpKf/bPg8GVkVXDEmWthUCbDbD5W8+vspeksky5j8b+G8b/TQtl8AVsuoKIka+p0f6iKT6HjGXwfViJKlklBmjsS4KwuvvAe/pY7ViH4jeRRquUjei/Gg45CRfhKpKmzR94MTiKxGbh8c4geN+6sw7tVVZBsC+U0V989hOInkFr6wwXM+ScG12jxAxrn1A2WFiXZu+u8187blsJxgvBHz2xqL+HdJ9D10m/n7L4BJk9l1G3fANUrbLNvIBfaUmSis7n46nBoCUlk2ghMIl+1mJx8V0uyUrZpE0yD3a3iEuhe45Zp0T2diaLmYZQFwVnZcaETuG/nOsz9IG+KOD+tOKQdH2tvP2iyftUMUWCJAVggXI/jcE1RbTKxLH/sm7p0eOuz9nBpC5LYhEGptwBg54GFRqQlNPsiLN5Tg6vjNuqYBT+tVvE7u3624psTLe7Urm652U8aWjYv2eqxqIZQIQsbO6pu1H72T/4vv4bj62BlgmAybT2sb2usqE/W4FGh21V5niOyp7BNkZF8Cvw4WId/zBt1vYqZnC28KVJtZhwy5dtaZhmo7ULWkBfnW0HHe2amuhZV5HiRTopqDFKYrTpn1kkVs8I1raLw=
+  - secure: NzT8hzBdPbrIyQLa6qFQ8xSm8EDYk3PfIYRven5n0FTDI+cTHZa9hI2gz+mOyD6Wwn50ITPuIrXOKNnZRBkLfkPCMli1TiQNWFSFsXObwa53FqQRcvyeL+/rjYk4EqwXWaIceE546TvF1jbM7cKv/1WzQcjRiyudUogIt9ruERjwSudD/zTQWwMbndxtj5ZVZSBR05h+zxsAWmG2nyzKQtjZvJ/4hK56/8cVZINPpXnlXd8dkRLO/mtnmwIubB2JfgsgmYs6l6lqk4Pql2JdAC1GTVI3/LN/OZ7pEL60SD0SPhYNWqwVfzsmEZXh6+MIrKRmDFKpdr1H0zqiBDB2hsFWJlCiwV/q0JTeTk0Mjv8NZ/Jq7uhsbvgQOmp+xcgXzbymVNSYWFsD4bYy2JDvq096ccmZSNh4eJWNdxsHFzij44ljAxkdI96H0fCVQU0+8drchKYv0Z/PflJ7YBFrz0iArQup/NteiPowt0dD1/Sgg0FU+g563QRx5sbiqYaZFoYpd5osrIZQKRA/sYNyfp/UwlusUNq73su5gn8ur7JLoPdu0K3V0PPNbb/9C0WvS6v/hkNhKqH2hgo+UPa7ZLtRQSKkZfE2wbFYh59Bh0+6J0tgb7yTn/uYNrrw6xwPWBZTmIortc0HCJ0pLj60xNYkboqfC7a3wu1BL466lDw=
