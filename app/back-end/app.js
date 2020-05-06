@@ -16,8 +16,9 @@ app.use(express.urlencoded({extended: false}));
 const fn = './config.json';
 const key = fs.readFileSync(fn);
 const conf = JSON.parse(key);
-const apiKey = conf.API_KEY;
-const sampleUrl = 'https://maps.googleapis.com/maps/api/directions/json?origin=Columbia+University&destination=Hudson+Yards,+New+York,+NY&mode=transit&alternatives=true&key='+apiKey;
+//const apiKey = conf.API_KEY;
+const apiKey = process.env.API_KEY;
+//const sampleUrl = 'https://maps.googleapis.com/maps/api/directions/json?origin=Columbia+University&destination=Hudson+Yards,+New+York,+NY&mode=transit&alternatives=true&key='+apiKey;
 
 // schema
 const User = require('./db.js');
@@ -29,10 +30,10 @@ passport.deserializeUser(User.deserializeUser());
 
 
 // connecting to db
-const DB_USER = process.env.DB_USER;
-const DB_PASS = process.env.DB_PASS;
-const DB_HOST = process.env.DB_HOST;
-const dbUrl = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}`;
+//const DB_USER = process.env.DB_USER;
+//const DB_PASS = process.env.DB_PASS;
+//const DB_HOST = process.env.DB_HOST;
+const dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
   if (err) {
     console.log('Could not connect to database');

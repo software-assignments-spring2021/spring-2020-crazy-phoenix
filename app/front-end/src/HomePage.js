@@ -5,7 +5,8 @@ import { slide as Menu } from 'react-burger-menu'
 import PossibleRoutes from './possibleRoutes';
 
 import key from './config';
-const apiKey = key.API_KEY;
+//const apiKey = key.API_KEY;
+const apiKey = process.env.API_KEY;
 const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=' + apiKey;
 
 
