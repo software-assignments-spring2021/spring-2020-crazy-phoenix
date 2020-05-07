@@ -1,14 +1,33 @@
+
+
 .back_icon {
     color: black;
 }
 
+
+
 .route {
-    border-bottom: 2px solid blue;
+    border-bottom: 20px solid blue;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
 }
 .content {
-    color: black;
+    color: rgba(0, 0, 0, 0.63);
+    margin: 50px auto;
+    width: 640px;
+    
 }
+
+header#possibleRoutes{
+    background-color: #4CAF50;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+    
