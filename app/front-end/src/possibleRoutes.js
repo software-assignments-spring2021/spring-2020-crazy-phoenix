@@ -13,7 +13,7 @@ const getShortRoute = (routeObjectString) => { console.log(routeObjectString);
       if (steps[k].travel_mode === 'TRANSIT') {
         routePath += steps[k].transit_details.departure_stop.name;
         routePath += "(" +steps[k].transit_details.departure_time.text+")";
-        routePath += '---> ';
+        routePath += ' subway ---> ';
         routePath += steps[k].transit_details.arrival_stop.name;
         routePath += "(" +steps[k].transit_details.arrival_time.text+")";
 
@@ -53,16 +53,13 @@ const PossibleRoutes = (props) => {
   return (
     <header id='possibleRoutes'>
     <div className="possibleRoutes">
-    <Link to="/Home"><div class="bk-btn"><div class="bk-btn-triangle"></div><div class="bk-btn-bar"></div></div></Link>
+      <Link to="/Home">&#60;</Link>
       <h1>possible routes</h1>
       <section className="content">
         {routeObjectStringArray.map(routeString => (
-          <div class='smallContent'>
-          <section className="route"><div className='padd'>{getShortRoute(routeString)}
-           <Link to={{pathname: '/Route', state: {routeString}}}>select</Link></div>
+          <section className="route">{getShortRoute(routeString)}
+           <Link to={{pathname: '/Route', state: {routeString}}}>select</Link>
           </section>
-          </div>
-
         ))}
       </section>
     </div>

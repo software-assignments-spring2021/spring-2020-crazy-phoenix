@@ -1,13 +1,8 @@
 import React from 'react';
 import './HomePage.css';
 import { slide as Menu } from 'react-burger-menu'
-import PossibleRoutes from './possibleRoutes';
-import background from './backgroundImage.jpg';
 
-// import key from './config';
-// const apiKey = key.API_KEY;
-const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=AIzaSyDx0uVQTk3Ukph1ph9ppl97vC3M7rVKJ6U' + apiKey;
-
+//const apiKey = key.API_KEY;
 const apiKey = process.env.API_KEY;
 const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=' + apiKey;
 
@@ -28,24 +23,22 @@ function HomePage(props) {
   };
 
   return (
-    
-    <header className='home'>
-
-      <div className='homeForm'>
+    <div className = "map">
+      <Menu id = "Burger">
+      </Menu>
       <form onSubmit={handleSubmit} className = "Search-form">
-        <div className='homeContainer'>
-        <label for="origin"><b>From</b></label>
-        <input type='text' id='origin' name='origin' onChange={originHandleChange}/><br/>
-
-        <label for="destination"><b>To</b></label> 
-        <input type='text' id='destination' name='destination' onChange={destinationHandleChange}/><br/>
-
-        <button  type='submit'>Go</button>
-        </div>  
+        <label id = "From-bar">
+          <div id = "From-text">From</div>
+          <input name="origin" onChange={originHandleChange} type = "text" style ={{width: 300}}/>
+        </label>
+        <label id = "To-bar">
+          <div id ="To-text"> To</div>
+          <input name="desto" onChange={destinationHandleChange} type = "text" style ={{width: 300}}/>
+        </label>
+        <input type="submit" style={{marginLeft: 10}} value="GO" />
       </form>
-      </div>
-    </header>
-    
+      <img src = {mapUrl} alt = "Map of NYC"/>
+    </div>
   );
 }
   export default HomePage;
