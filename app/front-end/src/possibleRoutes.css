@@ -1,0 +1,76 @@
+
+
+.back_icon {
+    color: black;
+}
+
+
+
+.route {
+    border: px solid blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #8B008B;
+    border-radius: 8px;
+  
+}
+.content {
+
+    font-family: 'Bookman old style', Helvetica, sans-serif;
+    color: black; 
+    margin: 50px auto;
+    width: 640px;
+    
+}
+
+.padd{
+    margin: 2px auto;
+    padding:10px;
+}
+
+header#possibleRoutes{
+    background-color: #4CAF50;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+    
+  .smallContent{
+    margin: 20px auto;
+    width: 640px;
+  }
+
+  .possibleRoutes{
+    align-items: center;
+  }
+
+.bk-btn {
+  height: 52px;
+  width: 52px;
+  background-color: black;
+  border-radius: 50%;
+  .bk-btn-triangle {
+    position: relative;
+    top: 52px*0.25;
+    left: 52px*0.2;
+    width: 0; 
+    height: 0; 
+    border-top: 52px*0.25 solid transparent;
+    border-bottom: 52px*0.25 solid transparent; 
+    border-right: 52px*0.25 solid white; 
+  }
+  .bk-btn-bar {
+    position: relative;
+    background-color: white;
+    height: 52px*0.15;
+    width: 52px*0.25;
+    top: 52px*-0.07;
+    left: 52px*0.44;
+  }
+}

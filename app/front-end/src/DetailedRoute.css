@@ -1,0 +1,34 @@
+
+.App {
+    background-color: wheat;
+}
+
+.Stops {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color:#8B008B;
+}
+.Stop {
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    padding: 1em;
+    background-color:#4CAF50;
+}
+
+.Arrow {
+    max-width:5%;
+    height: auto;
+}
+
+header#detailedRoute{
+    background-color: #4CAF50;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
