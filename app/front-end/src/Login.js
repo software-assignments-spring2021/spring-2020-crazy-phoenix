@@ -61,10 +61,10 @@ function LoginForm(props){
           </div>
           <div class ='container'>
             <label for="email"><b>Username</b></label>
-            <input type='text' id='inputEmail' name='email' className='usernameI' onChange={emailHandleChange}/><br/>
+            <input type='text' id='inputEmail' name='email' onChange={emailHandleChange}/><br/>
            
             <label for="loginEmail"><b>Password</b></label>
-            <input type='text' id='inputPassword' name='password' className='passwordI' onChange={passwordHandleChange}/><br/>
+            <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
            
             <button  type='submit'>Login</button>
           </div>
