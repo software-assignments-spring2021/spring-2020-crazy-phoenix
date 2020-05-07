@@ -34,7 +34,8 @@ passport.deserializeUser(User.deserializeUser());
 let dbUrl = '';
 // testing environment
 if (!process.env.PRODUCTION || process.env.PRODUCTION !== '0') {
-  dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
+  //dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
+  dbUrl = 'mongodb://mongo:27017/group_project';
 } else {
   dbUrl = `mongodb://localhost/group_project`;
 }

@@ -1,0 +1,13 @@
+version: "4"
+services:
+  app:
+    container_name: back-end
+    build: .
+    ports:
+      - "9000:9000"
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
