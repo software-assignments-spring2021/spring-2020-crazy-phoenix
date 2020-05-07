@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
-app.use(cors({ origin: 'http://localhost:3001', credentials: true }));
+app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 app.use(express.urlencoded({extended: false}));
 //const fn = './config.json';
 //const key = fs.readFileSync(fn);
@@ -29,7 +29,8 @@ passport.deserializeUser(User.deserializeUser());
 
 
 // connecting to db
-const dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
+//const dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
+const dbUrl = `mongodb://localhost/group_project`;
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
   if (err) {
     console.log('Could not connect to database');
