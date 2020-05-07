@@ -7,27 +7,17 @@
 
 
 .route {
-    border: px solid blue;
+    border-bottom: 20px solid blue;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: #8B008B;
-    border-radius: 8px;
-  
+    align-items: flex-start;
+    justify-content: space-between;
 }
 .content {
-
-    font-family: 'Bookman old style', Helvetica, sans-serif;
-    color: black; 
+    color: rgba(0, 0, 0, 0.63);
     margin: 50px auto;
     width: 640px;
     
-}
-
-.padd{
-    margin: 2px auto;
-    padding:10px;
 }
 
 header#possibleRoutes{
@@ -41,36 +31,3 @@ header#possibleRoutes{
     color: white;
   }
     
-  .smallContent{
-    margin: 20px auto;
-    width: 640px;
-  }
-
-  .possibleRoutes{
-    align-items: center;
-  }
-
-.bk-btn {
-  height: 52px;
-  width: 52px;
-  background-color: black;
-  border-radius: 50%;
-  .bk-btn-triangle {
-    position: relative;
-    top: 52px*0.25;
-    left: 52px*0.2;
-    width: 0; 
-    height: 0; 
-    border-top: 52px*0.25 solid transparent;
-    border-bottom: 52px*0.25 solid transparent; 
-    border-right: 52px*0.25 solid white; 
-  }
-  .bk-btn-bar {
-    position: relative;
-    background-color: white;
-    height: 52px*0.15;
-    width: 52px*0.25;
-    top: 52px*-0.07;
-    left: 52px*0.44;
-  }
-}

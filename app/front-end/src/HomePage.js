@@ -2,10 +2,11 @@ import React from 'react';
 import './HomePage.css';
 import { slide as Menu } from 'react-burger-menu'
 import PossibleRoutes from './possibleRoutes';
-import background from './backgroundImage.jpg';
 
-// import key from './config';
-// const apiKey = key.API_KEY;
+
+
+//const apiKey = key.API_KEY;
+
 const apiKey = process.env.API_KEY;
 const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=' + apiKey;
 
@@ -26,11 +27,11 @@ function HomePage(props) {
   };
 
   return (
-    
-    <header className='home'>
-
-      <div className='homeForm'>
+    <div className = "map">
+      <Menu id = "Burger">
+      </Menu>
       <form onSubmit={handleSubmit} className = "Search-form">
+
         <div className='homeContainer'>
         <label for="origin"><b>From</b></label>
         <input type='text' id='origin' name='origin' className='originI' onChange={originHandleChange}/><br/>
@@ -40,10 +41,10 @@ function HomePage(props) {
 
         <button  type='submit'>Go</button>
         </div>  
+
       </form>
-      </div>
-    </header>
-    
+      <img src = {mapUrl} alt = "Map of NYC"/>
+    </div>
   );
 }
   export default HomePage;
