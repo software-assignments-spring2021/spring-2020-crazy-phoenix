@@ -10,6 +10,10 @@ const emailHandleChange = (event) => {
 const passwordHandleChange = (event) => {
   password = event.target.value;
 };
+const divStyle = {
+  backgroundColor: 'white smoke'
+
+};
 
 
 function LoginForm(props){
@@ -31,18 +35,52 @@ function LoginForm(props){
   
       return(
         <header id='login'>
-        <div>
-          <div className='hamburgerMenu'>
-             <ToggleButton click={props.hamburgerHandler}/>
+
+        <div className='container'>
+        <div className='blur'>
+        <div className='welcome'>
+        <h2>Welcome</h2>
+        </div>
+        
+        </div>
+          
+
+        
+          <div className='form'>
+          
+
+
+
+
+         
+         
+         
+          <form id='login' className='loginForm' onSubmit={handleSubmit}>
+          <div class="logocontainer">
+          <img src="img_avatar2.png" alt="Logo" class="avatar"></img>
           </div>
-          <h2>Welcome</h2>
-          <h3>Sign In</h3>
-          <form id='login' onSubmit={handleSubmit}>
-            Email  <input type='text' id='inputEmail' name='email' onChange={emailHandleChange}/><br/>
-            Password<input type='text' id='inputPassword' name='loginEmail' onChange={passwordHandleChange}/><br/>
-            <input type='submit' value='Sign In'/>
+          <div class ='container'>
+            <label for="email"><b>Username</b></label>
+            <input type='text' id='inputEmail' name='email' onChange={emailHandleChange}/><br/>
+           
+            <label for="loginEmail"><b>Password</b></label>
+            <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+           
+            <button  type='submit'>Login</button>
+          </div>
+
           </form>
-    
+         
+         
+         
+         
+         
+         
+         
+
+         
+          </div>
+          
         </div>
         <Link to='/SignUp' id = "signupLink">Sign Up</Link>
         </header>
