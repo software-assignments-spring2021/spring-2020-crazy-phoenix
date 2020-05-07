@@ -36,4 +36,56 @@ input#confirmPassword{
 
 #loginLink{
     color: white;
-}
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 94%;
+  }
+
+  input.signupI[type=text]  , input[type=password] {
+    width: 94%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  
+  
+  .container {
+    
+    margin: 50px auto;
+    width: 640px;
+  }
+  .welcome{
+    justify-content: center;
+    text-align: center;
+  }
+  
+
