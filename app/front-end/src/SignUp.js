@@ -42,7 +42,6 @@ function SignupForm(props){
         }
     };
     return(
-
         <header id='login'>
 
         <div className='container'>
@@ -63,19 +62,22 @@ function SignupForm(props){
                 </div>
                 <div class ='container'>
                     <label for="email"><b>First Name</b></label>
-                    <input type='text' id='inputEmail' name='email' onChange={firstHandleChange}/><br/>
+                    <input type='text' id='firstName'  className='signupI'onChange={firstHandleChange}/><br/>
            
                     <label for="loginEmail"><b>Last Name</b></label>
-                    <input type='text' id='inputPassword' name='password' onChange={lastHandleChange}/><br/>
+                    <input type='text' id='lastName' className='signupI' onChange={lastHandleChange}/><br/>
+                    
+                    <label for="loginEmail"><b>Email</b></label>
+                    <input type='text' id='signUpEmail'  className='signupI' onChange={emailHandleChange}/><br/>
 
                     <label for="loginEmail"><b>Username</b></label>
-                    <input type='text' id='inputPassword' name='password' onChange={emailHandleChange}/><br/>
+                    <input type='text' id='username'  className='signupI' /><br/>
 
                     <label for="loginEmail"><b>Password</b></label>
-                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
-
+                    <input type='text' id='password'  className='signupI' onChange={passwordHandleChange}/><br/>
+                        
                     <label for="loginEmail"><b>Confirm Password</b></label>
-                    <input type='text' id='inputPassword' name='password' onChange={password2HandleChange}/><br/>
+                    <input type='text' id='confirmPassword'  className='signupI' onChange={password2HandleChange}/><br/>
 
                     <button  type='submit'>Sign Up</button>
                 </div>
@@ -86,7 +88,6 @@ function SignupForm(props){
         </div>
         <Link to='/Login' id = "signupLink">Sign In</Link>
         </header>
-
 
     )
 }
