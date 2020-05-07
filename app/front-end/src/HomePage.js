@@ -6,7 +6,7 @@ import background from './backgroundImage.jpg';
 
 // import key from './config';
 // const apiKey = key.API_KEY;
-const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=AIzaSyDx0uVQTk3Ukph1ph9ppl97vC3M7rVKJ6U' + apiKey;
+//const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=AIzaSyDx0uVQTk3Ukph1ph9ppl97vC3M7rVKJ6U' + apiKey;
 
 const apiKey = process.env.API_KEY;
 const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=' + apiKey;
@@ -35,10 +35,10 @@ function HomePage(props) {
       <form onSubmit={handleSubmit} className = "Search-form">
         <div className='homeContainer'>
         <label for="origin"><b>From</b></label>
-        <input type='text' id='origin' name='origin' onChange={originHandleChange}/><br/>
+        <input type='text' id='origin' name='origin' className='originI' onChange={originHandleChange}/><br/>
 
         <label for="destination"><b>To</b></label> 
-        <input type='text' id='destination' name='destination' onChange={destinationHandleChange}/><br/>
+        <input type='text' id='destination' name='destination' className='destinationI' onChange={destinationHandleChange}/><br/>
 
         <button  type='submit'>Go</button>
         </div>  

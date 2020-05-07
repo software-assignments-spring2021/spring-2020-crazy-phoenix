@@ -62,19 +62,19 @@ function SignupForm(props){
                 </div>
                 <div class ='container'>
                     <label for="email"><b>First Name</b></label>
-                    <input type='text' id='inputEmail' name='email' onChange={emailHandleChange}/><br/>
+                    <input type='text' id='inputEmail' name='email' className='signupI'onChange={emailHandleChange}/><br/>
            
                     <label for="loginEmail"><b>Last Name</b></label>
-                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+                    <input type='text' id='inputPassword' name='password' className='signupI' onChange={passwordHandleChange}/><br/>
 
                     <label for="loginEmail"><b>Username</b></label>
-                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+                    <input type='text' id='inputPassword' name='password' className='signupI' onChange={passwordHandleChange}/><br/>
 
                     <label for="loginEmail"><b>Password</b></label>
-                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+                    <input type='text' id='inputPassword' name='password' className='signupI' onChange={passwordHandleChange}/><br/>
 
                     <label for="loginEmail"><b>Confirm Password</b></label>
-                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+                    <input type='text' id='inputPassword' name='password' className='signupI' onChange={passwordHandleChange}/><br/>
 
                     <button  type='submit'>Sign Up</button>
                 </div>
