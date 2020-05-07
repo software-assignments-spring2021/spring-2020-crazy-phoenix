@@ -1,14 +1,7 @@
 
-input#inputEmail{
-  flex: 0 0 200px;
-  margin-left: 37px;
-}
-input#inputPassword{
-  margin-left: 5px;
-}
 
 header#login{
-  background-color: #8B008B;
+  background-color: #4CAF50;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,7 +10,67 @@ header#login{
   font-size: calc(10px + 2vmin);
   color: white;
 }
+  
+.loginForm {
+  border-radius: 25px;
+  background-color: #8B008B;
+  border: 2px solid #632929 ;
+}
 
-#signupLink{
+input[type=text], input[type=password] {
+  width: 94%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+label{
+  padding: 10px 10px;
+}
+button {
+  background-color: #4CAF50;
   color: white;
+  padding: 10px 20px;
+  margin: 8px 0px;
+  border: none;
+  cursor: pointer;
+  width: 94%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+
+
+.container {
+  
+  margin: 50px auto;
+  width: 640px;
+}
+.welcome{
+  justify-content: center;
+  text-align: center
 }

@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/nyu-software-engineering/spring-2020-crazy-phoenix.svg?branch=master)](https://travis-ci.com/nyu-software-engineering/spring-2020-crazy-phoenix)
 
 # Project Description
 Transportation for Everyone is a web application with the goal of providing accessible public transportation routes for the disabled within
@@ -14,8 +15,8 @@ Our MVP will consist of the following main features:
 # to run
 * database must be already running.
 * in the back-end directory, in the console, type node server.js
-* in the front-end directory, in another console, type npm start. When you are asked if the app should be served on a separate port, type y<br>
-localhost:3000/Login<br>
+* in the front-end directory, in another console, type npm start.
+* type in http://localhost:3000/login
 This should direct you to a login page. Create account (by clicking on the create account page), then login.
 
 

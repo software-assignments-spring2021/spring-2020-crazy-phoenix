@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import SignupForm from './SignUp.js';
-import LoginForm from './Login.js';
-import HomePage from './HomePage.js';
 import DetailedRoute from './DetailedRoute.js';
 import Profile from './UserProfile.js';
 import PossibleRoutes from './possibleRoutes';
