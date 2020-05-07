@@ -28,7 +28,9 @@ const getShortRoute = (routeObjectString) => { console.log(routeObjectString);
 };
 
 const PossibleRoutes = (props) => {
-  
+  const routes = props.location.state;
+  const routesList = routes.routes;
+
   const routeObjectStringArray = [];
   for (let i = 0; i < routesList.length; i++) {
     const string = JSON.stringify(routesList[i]);
