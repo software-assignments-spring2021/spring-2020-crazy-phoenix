@@ -2,7 +2,6 @@ import React from 'react';
 import './HomePage.css';
 import { slide as Menu } from 'react-burger-menu'
 import PossibleRoutes from './possibleRoutes';
-import background from './backgroundImage.jpg';
 
 
 
