@@ -18,8 +18,8 @@ app.use(express.urlencoded({extended: false}));
 //const apiKey = conf.API_KEY;
 app.use(express.urlencoded({ extended: false }));
 
-//const apiKey = process.env.API_KEY;
-const apiKey = require('config.json').API_KEY;
+const apiKey = process.env.API_KEY;
+//const apiKey = require('config.json').API_KEY;
 
 // schema
 const User = require('./db.js');
