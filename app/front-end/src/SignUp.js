@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './SignUp.css';
 
@@ -42,21 +42,105 @@ function SignupForm(props){
         }
     };
     return(
+        <header id='login'>
+
+        <div className='container'>
+        <div className='blur'>
+        <div className='welcome'>
+        <h2>Welcome</h2>
+        </div>
+        
+        </div>
+          
+
+        
+          <div className='form'>
+          
+          <form id='login' className='signupForm' onSubmit={handleSubmit}>
+                <div class="logocontainer">
+                    <img src="img_avatar2.png" alt="Avatar" class="avatar"></img>
+                </div>
+                <div class ='container'>
+                    <label for="email"><b>First Name</b></label>
+                    <input type='text' id='inputEmail' name='email' onChange={emailHandleChange}/><br/>
+           
+                    <label for="loginEmail"><b>Last Name</b></label>
+                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+
+                    <label for="loginEmail"><b>Username</b></label>
+                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+
+                    <label for="loginEmail"><b>Password</b></label>
+                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+
+                    <label for="loginEmail"><b>Confirm Password</b></label>
+                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+
+                    <button  type='submit'>Sign Up</button>
+                </div>
+            </form>
+        
+          </div>
+          
+        </div>
+        <Link to='/Login' id = "signupLink">Sign In</Link>
+        </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
         <header id='signup'>
         <div>
+
+            <div className='welcome'>
             <h2>Welcome</h2>
             <h1>Create An Account</h1>
-            <form type='text' onSubmit={handleSubmit}>
-                First Name <input type='text' id='firstName' onChange={firstHandleChange}/><br/>
-                Last Name <input type='text' id='lastName' onChange={lastHandleChange}/><br/>
-                Username <input type='text' id='username'/><br/>
-                Email <input type='email' id='signUpEmail' onChange={emailHandleChange}/><br/>
-                Password <input type='password' id='signUpPassword' onChange={passwordHandleChange}/><br/>
-                Confirm Password <input type='password' id='confirmPassword' onChange={password2HandleChange}/><br/>
-                <input type="submit" value="Sign Up!"/>
+            </div>
+
+            <div className='form'>
+            <form id='login' className='signupForm' onSubmit={handleSubmit}>
+                <div class="logocontainer">
+                    <img src="img_avatar2.png" alt="Avatar" class="avatar"></img>
+                </div>
+                <div class ='container'>
+                    <label for="email"><b>First Name</b></label>
+                    <input type='text' id='inputEmail' name='email' onChange={emailHandleChange}/><br/>
+           
+                    <label for="loginEmail"><b>Last Name</b></label>
+                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+
+                    <label for="loginEmail"><b>Username</b></label>
+                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+
+                    <label for="loginEmail"><b>Password</b></label>
+                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+
+                    <label for="loginEmail"><b>Confirm Password</b></label>
+                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+
+                    <button  type='submit'>Sign Up</button>
+                </div>
             </form>
+
+    
+            </div>
         </div>
-        </header>
+        </header>*/
     )
 }
 
