@@ -1,0 +1,1568 @@
+{
+  "geocoded_waypoints" : [
+    {
+      "geocoder_status" : "OK",
+      "place_id" : "ChIJT5P7cLZZwokRJhDnzKdPvSk",
+      "types" : [ "neighborhood", "political" ]
+    },
+    {
+      "geocoder_status" : "OK",
+      "place_id" : "ChIJyQ3Tlj72wokRUCflR_kzeVc",
+      "types" : [ "establishment", "point_of_interest", "university" ]
+    }
+  ],
+  "routes" : [
+    {
+      "bounds" : {
+        "northeast" : {
+          "lat" : 40.8079657,
+          "lng" : -73.96245789999999
+        },
+        "southwest" : {
+          "lat" : 40.75487210000001,
+          "lng" : -74.0033115
+        }
+      },
+      "copyrights" : "Map data ©2020",
+      "legs" : [
+        {
+          "arrival_time" : {
+            "text" : "12:10am",
+            "time_zone" : "America/New_York",
+            "value" : 1588479041
+          },
+          "departure_time" : {
+            "text" : "11:35pm",
+            "time_zone" : "America/New_York",
+            "value" : 1588476924
+          },
+          "distance" : {
+            "text" : "5.3 mi",
+            "value" : 8495
+          },
+          "duration" : {
+            "text" : "35 mins",
+            "value" : 2117
+          },
+          "end_address" : "New York, NY 10027, USA",
+          "end_location" : {
+            "lat" : 40.8074166,
+            "lng" : -73.96245789999999
+          },
+          "start_address" : "Hudson Yards, New York, NY 10001, USA",
+          "start_location" : {
+            "lat" : 40.7563108,
+            "lng" : -74.0033115
+          },
+          "steps" : [
+            {
+              "distance" : {
+                "text" : "0.3 mi",
+                "value" : 435
+              },
+              "duration" : {
+                "text" : "6 mins",
+                "value" : 366
+              },
+              "end_location" : {
+                "lat" : 40.755882,
+                "lng" : -74.001907
+              },
+              "html_instructions" : "Walk to 34 St - Hudson Yards",
+              "polyline" : {
+                "points" : "}ewwFtwtbMNg@BIDKRq@FUDK\\eADIJYDQJW~@sCFS`@sAh@b@LJSd@uDrD"
+              },
+              "start_location" : {
+                "lat" : 40.7563108,
+                "lng" : -74.0033115
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "0.2 mi",
+                    "value" : 268
+                  },
+                  "duration" : {
+                    "text" : "4 mins",
+                    "value" : 212
+                  },
+                  "end_location" : {
+                    "lat" : 40.755146,
+                    "lng" : -74.00058199999999
+                  },
+                  "html_instructions" : "Head \u003cb\u003esoutheast\u003c/b\u003e on \u003cb\u003eW 34th St\u003c/b\u003e toward \u003cb\u003e11th Ave\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "}ewwFtwtbMNg@BIDKRq@FUDK\\eADIJYDQJW~@sCFS`@sA"
+                  },
+                  "start_location" : {
+                    "lat" : 40.7563108,
+                    "lng" : -74.0033115
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "131 ft",
+                    "value" : 40
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 26
+                  },
+                  "end_location" : {
+                    "lat" : 40.75487210000001,
+                    "lng" : -74.00081510000001
+                  },
+                  "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eHudson Blvd E\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "u~vwFrftbMh@b@LJ"
+                  },
+                  "start_location" : {
+                    "lat" : 40.755146,
+                    "lng" : -74.00058199999999
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "417 ft",
+                    "value" : 127
+                  },
+                  "duration" : {
+                    "text" : "2 mins",
+                    "value" : 128
+                  },
+                  "end_location" : {
+                    "lat" : 40.755882,
+                    "lng" : -74.001907
+                  },
+                  "html_instructions" : "Take entrance \u003cspan class=\"location\"\u003eHudson Blvd East between 33rd St & 34th St\u003c/span\u003e",
+                  "polyline" : {
+                    "points" : "q}vwFhitbMuDrD"
+                  },
+                  "start_location" : {
+                    "lat" : 40.7549652,
+                    "lng" : -74.00100560000001
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            },
+            {
+              "distance" : {
+                "text" : "0.9 mi",
+                "value" : 1528
+              },
+              "duration" : {
+                "text" : "3 mins",
+                "value" : 180
+              },
+              "end_location" : {
+                "lat" : 40.755478,
+                "lng" : -73.98769399999999
+              },
+              "html_instructions" : "Subway towards Flushing - Main St",
+              "polyline" : {
+                "points" : "gcwwF|ntbMq@c@{LcIm@c@i@c@c@e@]i@Yi@Um@Om@Iq@Eq@Au@Du@Hy@Ly@R}@V_A~Usu@"
+              },
+              "start_location" : {
+                "lat" : 40.755882,
+                "lng" : -74.001907
+              },
+              "transit_details" : {
+                "arrival_stop" : {
+                  "location" : {
+                    "lat" : 40.755478,
+                    "lng" : -73.98769399999999
+                  },
+                  "name" : "Times Sq-42 St"
+                },
+                "arrival_time" : {
+                  "text" : "11:44pm",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588477470
+                },
+                "departure_stop" : {
+                  "location" : {
+                    "lat" : 40.755882,
+                    "lng" : -74.001907
+                  },
+                  "name" : "34 St - Hudson Yards"
+                },
+                "departure_time" : {
+                  "text" : "11:41pm",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588477290
+                },
+                "headsign" : "Flushing - Main St",
+                "line" : {
+                  "agencies" : [
+                    {
+                      "name" : "MTA New York City Transit",
+                      "phone" : "1 (718) 330-1234",
+                      "url" : "http://www.mta.info/"
+                    }
+                  ],
+                  "color" : "#b933ad",
+                  "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/us-ny-mta/7.png",
+                  "name" : "Line 7, NYC Subway",
+                  "short_name" : "7",
+                  "text_color" : "#ffffff",
+                  "url" : "http://web.mta.info/nyct/service/pdf/t7cur.pdf",
+                  "vehicle" : {
+                    "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/subway2.png",
+                    "name" : "Subway",
+                    "type" : "SUBWAY"
+                  }
+                },
+                "num_stops" : 1
+              },
+              "travel_mode" : "TRANSIT"
+            },
+            {
+              "distance" : {
+                "text" : "85 ft",
+                "value" : 26
+              },
+              "duration" : {
+                "text" : "1 min",
+                "value" : 27
+              },
+              "end_location" : {
+                "lat" : 40.755291,
+                "lng" : -73.987495
+              },
+              "html_instructions" : "Walk to Times Sq - 42 St",
+              "polyline" : {
+                "points" : "w`wwF`vqbMd@e@"
+              },
+              "start_location" : {
+                "lat" : 40.755478,
+                "lng" : -73.98769399999999
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "85 ft",
+                    "value" : 26
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 27
+                  },
+                  "end_location" : {
+                    "lat" : 40.755291,
+                    "lng" : -73.987495
+                  },
+                  "polyline" : {
+                    "points" : "w`wwF`vqbMd@e@"
+                  },
+                  "start_location" : {
+                    "lat" : 40.755478,
+                    "lng" : -73.98769399999999
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            },
+            {
+              "distance" : {
+                "text" : "3.9 mi",
+                "value" : 6300
+              },
+              "duration" : {
+                "text" : "16 mins",
+                "value" : 930
+              },
+              "end_location" : {
+                "lat" : 40.80772,
+                "lng" : -73.964111
+              },
+              "html_instructions" : "Subway towards Van Cortlandt Park - 242 St",
+              "polyline" : {
+                "points" : "q_wwFztqbMyKiH{@k@WOWMYM]Ki@Qs@QyCu@}@S}@Ws@U}@_@m@Yk@]iCwAwCaBaB_AuAo@{@a@_A_@gA]uAa@}@QaAOeAMgE]gAK]AW@W?WBSBUFgA\\i@NWHWBQ@uA@kYTqC?ySWiAEcAIo@GiAMyB[wHwAgFmAm@Oo@Sa@Oc@Qc@S_@U}ByAyQeMaCmBoEoD_Aw@_^sUQIc[qSKIKIMIKGMIKGKGMGKGKGKEKEMGKEKE_Aa@eAYmASgAI}ES_AG{@Mc@M]Me@Ui@]_C}AmVcP"
+              },
+              "start_location" : {
+                "lat" : 40.755291,
+                "lng" : -73.987495
+              },
+              "transit_details" : {
+                "arrival_stop" : {
+                  "location" : {
+                    "lat" : 40.80772,
+                    "lng" : -73.964111
+                  },
+                  "name" : "116 Street Station - Columbia University"
+                },
+                "arrival_time" : {
+                  "text" : "12:08am",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588478880
+                },
+                "departure_stop" : {
+                  "location" : {
+                    "lat" : 40.755291,
+                    "lng" : -73.987495
+                  },
+                  "name" : "Times Sq - 42 St"
+                },
+                "departure_time" : {
+                  "text" : "11:52pm",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588477950
+                },
+                "headsign" : "Van Cortlandt Park - 242 St",
+                "line" : {
+                  "agencies" : [
+                    {
+                      "name" : "MTA New York City Transit",
+                      "phone" : "1 (718) 330-1234",
+                      "url" : "http://www.mta.info/"
+                    }
+                  ],
+                  "color" : "#ee352e",
+                  "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/us-ny-mta/1.png",
+                  "name" : "1 Line",
+                  "short_name" : "1",
+                  "text_color" : "#ffffff",
+                  "url" : "http://web.mta.info/nyct/service/pdf/t1cur.pdf",
+                  "vehicle" : {
+                    "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/subway2.png",
+                    "name" : "Subway",
+                    "type" : "SUBWAY"
+                  }
+                },
+                "num_stops" : 10
+              },
+              "travel_mode" : "TRANSIT"
+            },
+            {
+              "distance" : {
+                "text" : "0.1 mi",
+                "value" : 206
+              },
+              "duration" : {
+                "text" : "3 mins",
+                "value" : 161
+              },
+              "end_location" : {
+                "lat" : 40.8074166,
+                "lng" : -73.96245789999999
+              },
+              "html_instructions" : "Walk to New York, NY 10027, USA",
+              "polyline" : {
+                "points" : "ggaxFtbmbMd@QCF]Wc@YQIBEbAaDd@{A"
+              },
+              "start_location" : {
+                "lat" : 40.80772,
+                "lng" : -73.964111
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "72 ft",
+                    "value" : 22
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 23
+                  },
+                  "end_location" : {
+                    "lat" : 40.807531,
+                    "lng" : -73.9640223
+                  },
+                  "html_instructions" : "Take exit \u003cspan class=\"location\"\u003eBroadway & 116th St at SE corner\u003c/span\u003e",
+                  "polyline" : {
+                    "points" : "ggaxFtbmbMd@Q"
+                  },
+                  "start_location" : {
+                    "lat" : 40.80772,
+                    "lng" : -73.964111
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "174 ft",
+                    "value" : 53
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 40
+                  },
+                  "end_location" : {
+                    "lat" : 40.8079657,
+                    "lng" : -73.96376409999999
+                  },
+                  "html_instructions" : "Head \u003cb\u003enortheast\u003c/b\u003e on \u003cb\u003eBroadway\u003c/b\u003e toward \u003cb\u003eW 116th St\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "efaxFjbmbM]Wc@YQI"
+                  },
+                  "start_location" : {
+                    "lat" : 40.8075462,
+                    "lng" : -73.96405759999999
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "430 ft",
+                    "value" : 131
+                  },
+                  "duration" : {
+                    "text" : "2 mins",
+                    "value" : 98
+                  },
+                  "end_location" : {
+                    "lat" : 40.8074166,
+                    "lng" : -73.96245789999999
+                  },
+                  "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at \u003cb\u003eW 116th St\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "yhaxFn`mbMBEbAaDd@{A"
+                  },
+                  "start_location" : {
+                    "lat" : 40.8079657,
+                    "lng" : -73.96376409999999
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            }
+          ],
+          "traffic_speed_entry" : [],
+          "via_waypoint" : []
+        }
+      ],
+      "overview_polyline" : {
+        "points" : "}ewwFtwtbM~AaF|AwEh@gBv@n@Sd@uDrDq@c@iNgJmAiAw@sAe@{AOcBBkBVsBj@}B~Usu@d@e@uMuIo@]w@Y}Ac@wEiAqBm@kBy@uDuByFaDqCqAgC}@sCs@gC]oGi@u@?o@Bi@JqBl@o@LgBBkYTqC?ySWiAEsBQcEi@wHwAgFmA}Ac@eAa@cAi@wU_PqI}G_Aw@_^sUu[{Sq@e@s@a@uCqAeAYmASgAI}ES{BUaA[oAs@mZaSd@QCF]Wu@c@fAgDd@{A"
+      },
+      "summary" : "",
+      "warnings" : [
+        "Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths."
+      ],
+      "waypoint_order" : []
+    },
+    {
+      "bounds" : {
+        "northeast" : {
+          "lat" : 40.8076771,
+          "lng" : -73.960724
+        },
+        "southwest" : {
+          "lat" : 40.754368,
+          "lng" : -74.0033115
+        }
+      },
+      "copyrights" : "Map data ©2020",
+      "legs" : [
+        {
+          "arrival_time" : {
+            "text" : "12:15am",
+            "time_zone" : "America/New_York",
+            "value" : 1588479326
+          },
+          "departure_time" : {
+            "text" : "11:39pm",
+            "time_zone" : "America/New_York",
+            "value" : 1588477198
+          },
+          "distance" : {
+            "text" : "4.5 mi",
+            "value" : 7312
+          },
+          "duration" : {
+            "text" : "35 mins",
+            "value" : 2128
+          },
+          "end_address" : "New York, NY 10027, USA",
+          "end_location" : {
+            "lat" : 40.8074166,
+            "lng" : -73.96245789999999
+          },
+          "start_address" : "Hudson Yards, New York, NY 10001, USA",
+          "start_location" : {
+            "lat" : 40.7563108,
+            "lng" : -74.0033115
+          },
+          "steps" : [
+            {
+              "distance" : {
+                "text" : "0.3 mi",
+                "value" : 411
+              },
+              "duration" : {
+                "text" : "6 mins",
+                "value" : 335
+              },
+              "end_location" : {
+                "lat" : 40.7545086,
+                "lng" : -73.9990523
+              },
+              "html_instructions" : "Walk to 10 Av/W 34 St",
+              "polyline" : {
+                "points" : "}ewwFtwtbMNg@BIDKRq@FUDK\\eADIJYDQJW~@sCFS`@sAFODSVw@J[\\gA`@qAFODO"
+              },
+              "start_location" : {
+                "lat" : 40.7563108,
+                "lng" : -74.0033115
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "0.3 mi",
+                    "value" : 411
+                  },
+                  "duration" : {
+                    "text" : "6 mins",
+                    "value" : 335
+                  },
+                  "end_location" : {
+                    "lat" : 40.7545086,
+                    "lng" : -73.9990523
+                  },
+                  "html_instructions" : "Head \u003cb\u003esoutheast\u003c/b\u003e on \u003cb\u003eW 34th St\u003c/b\u003e toward \u003cb\u003e11th Ave\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                  "polyline" : {
+                    "points" : "}ewwFtwtbMNg@BIDKRq@FUDK\\eADIJYDQJW~@sCFS`@sAFODSVw@J[\\gA`@qAFODO"
+                  },
+                  "start_location" : {
+                    "lat" : 40.7563108,
+                    "lng" : -74.0033115
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            },
+            {
+              "distance" : {
+                "text" : "4.2 mi",
+                "value" : 6718
+              },
+              "duration" : {
+                "text" : "27 mins",
+                "value" : 1622
+              },
+              "end_location" : {
+                "lat" : 40.807098,
+                "lng" : -73.960724
+              },
+              "html_instructions" : "Bus towards 133 St-Broadway",
+              "polyline" : {
+                "points" : "yyvwFt}sbMGVc@W_@WcBiAo@c@kAu@iAu@s@e@s@e@KGy@i@KGAAq@a@m@]QKOMCCA?AAGGOIAAAAaAm@u@g@iAw@GE]W}@i@]Uc@[cBgA{ByA_@U]WaAm@m@a@mA{@}B{Ao@c@iAu@{B{As@e@mAw@{BuA{B{AeAq@SOc@Y}@k@_Am@QQkBkA]UOKoAu@{AeACCc@YYQcAq@UOIGIG{ByAq@e@k@_@_@W{ByAaAs@y@m@m@]_@USK[S{ByAe@]_@Uu@i@k@]uA}@{BuAIGa@WqA}@qBqAIGw@g@WSWQUOQMYQYS[YWOs@e@EAKGcAm@YQc@Y]UWOSOQKoBmAOOq@e@YQa@Ys@e@iAu@cAo@[U_@Ws@c@iAu@mAy@y@i@y@i@oAy@mAy@o@a@m@a@oA{@kAu@s@e@m@_@mAw@qA{@m@a@gAu@aAq@{@i@GEQKq@_@}B{AqA{@YSQM{ByASIy@i@o@c@i@]sA}@sA_Ai@]k@a@_@Wq@c@yB}AiAu@}@m@}@k@a@Yg@[{B{Aq@c@a@Wi@]}B}AcAo@QMGE_@U{B{Au@g@]U]UKG_C}Ay@i@WOm@_@w@i@gAs@KGs@c@c@YSKQKYQsA{@SMOMEEm@a@KGQMGEEEKI_@[MK]Wc@WMIUMMG}@m@[Q{@k@_Ao@o@c@m@_@OKCAKGeAs@w@i@q@e@iAu@gCcBw@g@GEFS"
+              },
+              "start_location" : {
+                "lat" : 40.754368,
+                "lng" : -73.99915299999999
+              },
+              "transit_details" : {
+                "arrival_stop" : {
+                  "location" : {
+                    "lat" : 40.807098,
+                    "lng" : -73.960724
+                  },
+                  "name" : "Amsterdam Av/W 116 St"
+                },
+                "arrival_time" : {
+                  "text" : "12:06am",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588478762
+                },
+                "departure_stop" : {
+                  "location" : {
+                    "lat" : 40.754368,
+                    "lng" : -73.99915299999999
+                  },
+                  "name" : "10 Av/W 34 St"
+                },
+                "departure_time" : {
+                  "text" : "11:39pm",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588477140
+                },
+                "headsign" : "133 St-Broadway",
+                "line" : {
+                  "agencies" : [
+                    {
+                      "name" : "MTA",
+                      "url" : "http://www.mta.info/"
+                    }
+                  ],
+                  "color" : "#1d59b3",
+                  "name" : "Riverbank Park & Harlem - West Village",
+                  "short_name" : "M11",
+                  "text_color" : "#ffffff",
+                  "vehicle" : {
+                    "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                    "name" : "Bus",
+                    "type" : "BUS"
+                  }
+                },
+                "num_stops" : 34
+              },
+              "travel_mode" : "TRANSIT"
+            },
+            {
+              "distance" : {
+                "text" : "0.1 mi",
+                "value" : 183
+              },
+              "duration" : {
+                "text" : "2 mins",
+                "value" : 134
+              },
+              "end_location" : {
+                "lat" : 40.8074166,
+                "lng" : -73.96245789999999
+              },
+              "html_instructions" : "Walk to New York, NY 10027, USA",
+              "polyline" : {
+                "points" : "icaxFpmlbMGLAD?@M`@GRQh@_@hAFB?@?@GRc@rAPJJHVNAB"
+              },
+              "start_location" : {
+                "lat" : 40.8070944,
+                "lng" : -73.9607266
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "305 ft",
+                    "value" : 93
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 63
+                  },
+                  "end_location" : {
+                    "lat" : 40.8074956,
+                    "lng" : -73.96168999999999
+                  },
+                  "html_instructions" : "Head \u003cb\u003enorthwest\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "icaxFpmlbMGLAD?@M`@GRQh@_@hA"
+                  },
+                  "start_location" : {
+                    "lat" : 40.8070944,
+                    "lng" : -73.9607266
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "49 ft",
+                    "value" : 15
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 16
+                  },
+                  "end_location" : {
+                    "lat" : 40.8075011,
+                    "lng" : -73.9618292
+                  },
+                  "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eTake the stairs\u003c/div\u003e",
+                  "maneuver" : "turn-left",
+                  "polyline" : {
+                    "points" : "{eaxFpslbMFB?@?@GR"
+                  },
+                  "start_location" : {
+                    "lat" : 40.8074956,
+                    "lng" : -73.96168999999999
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "131 ft",
+                    "value" : 40
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 28
+                  },
+                  "end_location" : {
+                    "lat" : 40.8076771,
+                    "lng" : -73.96224909999999
+                  },
+                  "html_instructions" : "Slight \u003cb\u003eright\u003c/b\u003e",
+                  "maneuver" : "turn-slight-right",
+                  "polyline" : {
+                    "points" : "{eaxFltlbMc@rA"
+                  },
+                  "start_location" : {
+                    "lat" : 40.8075011,
+                    "lng" : -73.9618292
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "115 ft",
+                    "value" : 35
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 27
+                  },
+                  "end_location" : {
+                    "lat" : 40.8074166,
+                    "lng" : -73.96245789999999
+                  },
+                  "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eTake the stairs\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                  "maneuver" : "turn-left",
+                  "polyline" : {
+                    "points" : "_gaxF`wlbMPJJHVNAB"
+                  },
+                  "start_location" : {
+                    "lat" : 40.8076771,
+                    "lng" : -73.96224909999999
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            }
+          ],
+          "traffic_speed_entry" : [],
+          "via_waypoint" : []
+        }
+      ],
+      "overview_polyline" : {
+        "points" : "}ewwFtwtbM~AaF|AwEv@kCbBmFL_@ZRGVcAo@sCmB}FwDsA{@aCyAc@[uVgPeIqFoDaCiEmCyFwD}ByA}B}Am@a@kD{BeCaB_LqH{BaBmAs@qEwCwE{CyFsDeHwEu@m@kAu@QI}A_AmBoAaCyAaAu@yDgCsDaCgO{J}FwDuGkEwCmBoD{BkBoAmCgBmAs@aG_EgD{BcEsC{ByAwFuDmGcEsHaF_MaIcBcA}B}AsA}@_Aw@aAo@c@WcDsB{HgF{HgFGEFSENW|@q@rBFDk@hB\\TTR"
+      },
+      "summary" : "",
+      "warnings" : [
+        "Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths."
+      ],
+      "waypoint_order" : []
+    },
+    {
+      "bounds" : {
+        "northeast" : {
+          "lat" : 40.8079657,
+          "lng" : -73.96245789999999
+        },
+        "southwest" : {
+          "lat" : 40.750374,
+          "lng" : -74.0039767
+        }
+      },
+      "copyrights" : "Map data ©2020",
+      "legs" : [
+        {
+          "arrival_time" : {
+            "text" : "12:10am",
+            "time_zone" : "America/New_York",
+            "value" : 1588479041
+          },
+          "departure_time" : {
+            "text" : "11:41pm",
+            "time_zone" : "America/New_York",
+            "value" : 1588477279
+          },
+          "distance" : {
+            "text" : "5.3 mi",
+            "value" : 8513
+          },
+          "duration" : {
+            "text" : "29 mins",
+            "value" : 1762
+          },
+          "end_address" : "New York, NY 10027, USA",
+          "end_location" : {
+            "lat" : 40.8074166,
+            "lng" : -73.96245789999999
+          },
+          "start_address" : "Hudson Yards, New York, NY 10001, USA",
+          "start_location" : {
+            "lat" : 40.7563108,
+            "lng" : -74.0033115
+          },
+          "steps" : [
+            {
+              "distance" : {
+                "text" : "210 ft",
+                "value" : 64
+              },
+              "duration" : {
+                "text" : "1 min",
+                "value" : 41
+              },
+              "end_location" : {
+                "lat" : 40.7565894,
+                "lng" : -74.0039779
+              },
+              "html_instructions" : "Walk to W 34 St/12 Av",
+              "polyline" : {
+                "points" : "}ewwFtwtbMUt@a@nA"
+              },
+              "start_location" : {
+                "lat" : 40.7563108,
+                "lng" : -74.0033115
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "210 ft",
+                    "value" : 64
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 41
+                  },
+                  "end_location" : {
+                    "lat" : 40.7565894,
+                    "lng" : -74.0039779
+                  },
+                  "html_instructions" : "Head \u003cb\u003enorthwest\u003c/b\u003e on \u003cb\u003eW 34th St\u003c/b\u003e toward \u003cb\u003eHigh Line\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "}ewwFtwtbMUt@a@nA"
+                  },
+                  "start_location" : {
+                    "lat" : 40.7563108,
+                    "lng" : -74.0033115
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            },
+            {
+              "distance" : {
+                "text" : "0.8 mi",
+                "value" : 1246
+              },
+              "duration" : {
+                "text" : "5 mins",
+                "value" : 300
+              },
+              "end_location" : {
+                "lat" : 40.7510578,
+                "lng" : -73.99092419999999
+              },
+              "html_instructions" : "Bus towards SELECT BUS WATERSIDE via 34 ST via 2 AV",
+              "polyline" : {
+                "points" : "ofwwF~ytbMOKDKd@}ABIBMTo@FUDKDKVy@BINc@L_@~@uCHSd@{AHYVw@J[\\gAd@yAn@qBHWPi@?CPg@\\iAFQx@gC^kALe@Ni@`@oA@EDKFQBENa@FOFSHU\\iABMFSvAqELc@\\iAFS`@oAPi@J]FQPi@b@qADO^iAJF"
+              },
+              "start_location" : {
+                "lat" : 40.7564009,
+                "lng" : -74.00368019999999
+              },
+              "transit_details" : {
+                "arrival_stop" : {
+                  "location" : {
+                    "lat" : 40.7510578,
+                    "lng" : -73.99092419999999
+                  },
+                  "name" : "W 34 St & 7 Av"
+                },
+                "arrival_time" : {
+                  "text" : "11:47pm",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588477620
+                },
+                "departure_stop" : {
+                  "location" : {
+                    "lat" : 40.7564009,
+                    "lng" : -74.00368019999999
+                  },
+                  "name" : "W 34 St/12 Av"
+                },
+                "departure_time" : {
+                  "text" : "11:42pm",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588477320
+                },
+                "headsign" : "SELECT BUS WATERSIDE via 34 ST via 2 AV",
+                "line" : {
+                  "agencies" : [
+                    {
+                      "name" : "MTA",
+                      "url" : "http://www.mta.info/"
+                    }
+                  ],
+                  "color" : "#1d59b3",
+                  "name" : "East Side - Javits Center",
+                  "short_name" : "M34-SBS",
+                  "text_color" : "#ffffff",
+                  "vehicle" : {
+                    "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                    "name" : "Bus",
+                    "type" : "BUS"
+                  }
+                },
+                "num_stops" : 5
+              },
+              "travel_mode" : "TRANSIT"
+            },
+            {
+              "distance" : {
+                "text" : "243 ft",
+                "value" : 74
+              },
+              "duration" : {
+                "text" : "1 min",
+                "value" : 73
+              },
+              "end_location" : {
+                "lat" : 40.750374,
+                "lng" : -73.991058
+              },
+              "html_instructions" : "Walk to 34 St - Penn Station",
+              "polyline" : {
+                "points" : "ievwFdjrbMBI@CPJvB^"
+              },
+              "start_location" : {
+                "lat" : 40.7510925,
+                "lng" : -73.9909088
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "23 ft",
+                    "value" : 7
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 5
+                  },
+                  "end_location" : {
+                    "lat" : 40.7510633,
+                    "lng" : -73.9908389
+                  },
+                  "html_instructions" : "Head \u003cb\u003esoutheast\u003c/b\u003e on \u003cb\u003eW 34th St\u003c/b\u003e toward \u003cb\u003e7th Ave\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eFashion Ave\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "ievwFdjrbMBI@C"
+                  },
+                  "start_location" : {
+                    "lat" : 40.7510925,
+                    "lng" : -73.9909088
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "220 ft",
+                    "value" : 67
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 68
+                  },
+                  "end_location" : {
+                    "lat" : 40.750374,
+                    "lng" : -73.991058
+                  },
+                  "html_instructions" : "Take entrance \u003cspan class=\"location\"\u003e7th Ave & 34th St at SW corner\u003c/span\u003e",
+                  "polyline" : {
+                    "points" : "qdvwFbjrbMvB^"
+                  },
+                  "start_location" : {
+                    "lat" : 40.75097050000001,
+                    "lng" : -73.9909036
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            },
+            {
+              "distance" : {
+                "text" : "2.1 mi",
+                "value" : 3303
+              },
+              "duration" : {
+                "text" : "5 mins",
+                "value" : 270
+              },
+              "end_location" : {
+                "lat" : 40.778454,
+                "lng" : -73.981972
+              },
+              "html_instructions" : "Subway towards Harlem - 148 St",
+              "polyline" : {
+                "points" : "y`vwFbkrbMw]gUyKiH{@k@WOWMYM]Ki@Qs@QyCu@}@S}@Ws@U}@_@m@Yk@]iCwAwCaBaB_AuAo@{@a@_A_@gA]uAa@}@QaAOeAMgE]gAK]AW@W?WBSBUFgA\\i@NWHWBQ@uA@kYTqC?ySWiAEcAIo@G"
+              },
+              "start_location" : {
+                "lat" : 40.750374,
+                "lng" : -73.991058
+              },
+              "transit_details" : {
+                "arrival_stop" : {
+                  "location" : {
+                    "lat" : 40.778454,
+                    "lng" : -73.981972
+                  },
+                  "name" : "72 St"
+                },
+                "arrival_time" : {
+                  "text" : "11:57pm",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588478221
+                },
+                "departure_stop" : {
+                  "location" : {
+                    "lat" : 40.750374,
+                    "lng" : -73.991058
+                  },
+                  "name" : "34 St - Penn Station"
+                },
+                "departure_time" : {
+                  "text" : "11:52pm",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588477951
+                },
+                "headsign" : "Harlem - 148 St",
+                "line" : {
+                  "agencies" : [
+                    {
+                      "name" : "MTA New York City Transit",
+                      "phone" : "1 (718) 330-1234",
+                      "url" : "http://www.mta.info/"
+                    }
+                  ],
+                  "color" : "#ee352e",
+                  "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/us-ny-mta/3.png",
+                  "name" : "3 Line",
+                  "short_name" : "3",
+                  "text_color" : "#ffffff",
+                  "url" : "http://web.mta.info/nyct/service/pdf/t3cur.pdf",
+                  "vehicle" : {
+                    "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/subway2.png",
+                    "name" : "Subway",
+                    "type" : "SUBWAY"
+                  }
+                },
+                "num_stops" : 2
+              },
+              "travel_mode" : "TRANSIT"
+            },
+            {
+              "distance" : {
+                "text" : "1 ft",
+                "value" : 0
+              },
+              "duration" : {
+                "text" : "1 min",
+                "value" : 0
+              },
+              "end_location" : {
+                "lat" : 40.778454,
+                "lng" : -73.981972
+              },
+              "html_instructions" : "Walk to 72 St",
+              "polyline" : {
+                "points" : "ip{wFhrpbM"
+              },
+              "start_location" : {
+                "lat" : 40.778454,
+                "lng" : -73.981972
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "1 ft",
+                    "value" : 0
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 0
+                  },
+                  "end_location" : {
+                    "lat" : 40.778454,
+                    "lng" : -73.981972
+                  },
+                  "polyline" : {
+                    "points" : "ip{wFhrpbM"
+                  },
+                  "start_location" : {
+                    "lat" : 40.778454,
+                    "lng" : -73.981972
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            },
+            {
+              "distance" : {
+                "text" : "2.2 mi",
+                "value" : 3620
+              },
+              "duration" : {
+                "text" : "9 mins",
+                "value" : 540
+              },
+              "end_location" : {
+                "lat" : 40.80772,
+                "lng" : -73.964111
+              },
+              "html_instructions" : "Subway towards Van Cortlandt Park - 242 St",
+              "polyline" : {
+                "points" : "ip{wFhrpbMiAMyB[wHwAgFmAm@Oo@Sa@Oc@Qc@S_@U}ByAyQeMaCmBoEoD_Aw@_^sUQIc[qSKIKIMIKGMIKGKGMGKGKGKEKEMGKEKE_Aa@eAYmASgAI}ES_AG{@Mc@M]Me@Ui@]_C}AmVcP"
+              },
+              "start_location" : {
+                "lat" : 40.778454,
+                "lng" : -73.981972
+              },
+              "transit_details" : {
+                "arrival_stop" : {
+                  "location" : {
+                    "lat" : 40.80772,
+                    "lng" : -73.964111
+                  },
+                  "name" : "116 Street Station - Columbia University"
+                },
+                "arrival_time" : {
+                  "text" : "12:08am",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588478880
+                },
+                "departure_stop" : {
+                  "location" : {
+                    "lat" : 40.778454,
+                    "lng" : -73.981972
+                  },
+                  "name" : "72 St"
+                },
+                "departure_time" : {
+                  "text" : "11:59pm",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588478340
+                },
+                "headsign" : "Van Cortlandt Park - 242 St",
+                "line" : {
+                  "agencies" : [
+                    {
+                      "name" : "MTA New York City Transit",
+                      "phone" : "1 (718) 330-1234",
+                      "url" : "http://www.mta.info/"
+                    }
+                  ],
+                  "color" : "#ee352e",
+                  "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/us-ny-mta/1.png",
+                  "name" : "1 Line",
+                  "short_name" : "1",
+                  "text_color" : "#ffffff",
+                  "url" : "http://web.mta.info/nyct/service/pdf/t1cur.pdf",
+                  "vehicle" : {
+                    "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/subway2.png",
+                    "name" : "Subway",
+                    "type" : "SUBWAY"
+                  }
+                },
+                "num_stops" : 6
+              },
+              "travel_mode" : "TRANSIT"
+            },
+            {
+              "distance" : {
+                "text" : "0.1 mi",
+                "value" : 206
+              },
+              "duration" : {
+                "text" : "3 mins",
+                "value" : 161
+              },
+              "end_location" : {
+                "lat" : 40.8074166,
+                "lng" : -73.96245789999999
+              },
+              "html_instructions" : "Walk to New York, NY 10027, USA",
+              "polyline" : {
+                "points" : "ggaxFtbmbMd@QCF]Wc@YQIBEbAaDd@{A"
+              },
+              "start_location" : {
+                "lat" : 40.80772,
+                "lng" : -73.964111
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "72 ft",
+                    "value" : 22
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 23
+                  },
+                  "end_location" : {
+                    "lat" : 40.807531,
+                    "lng" : -73.9640223
+                  },
+                  "html_instructions" : "Take exit \u003cspan class=\"location\"\u003eBroadway & 116th St at SE corner\u003c/span\u003e",
+                  "polyline" : {
+                    "points" : "ggaxFtbmbMd@Q"
+                  },
+                  "start_location" : {
+                    "lat" : 40.80772,
+                    "lng" : -73.964111
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "174 ft",
+                    "value" : 53
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 40
+                  },
+                  "end_location" : {
+                    "lat" : 40.8079657,
+                    "lng" : -73.96376409999999
+                  },
+                  "html_instructions" : "Head \u003cb\u003enortheast\u003c/b\u003e on \u003cb\u003eBroadway\u003c/b\u003e toward \u003cb\u003eW 116th St\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "efaxFjbmbM]Wc@YQI"
+                  },
+                  "start_location" : {
+                    "lat" : 40.8075462,
+                    "lng" : -73.96405759999999
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "430 ft",
+                    "value" : 131
+                  },
+                  "duration" : {
+                    "text" : "2 mins",
+                    "value" : 98
+                  },
+                  "end_location" : {
+                    "lat" : 40.8074166,
+                    "lng" : -73.96245789999999
+                  },
+                  "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at \u003cb\u003eW 116th St\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "yhaxFn`mbMBEbAaDd@{A"
+                  },
+                  "start_location" : {
+                    "lat" : 40.8079657,
+                    "lng" : -73.96376409999999
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            }
+          ],
+          "traffic_speed_entry" : [],
+          "via_waypoint" : []
+        }
+      ],
+      "overview_polyline" : {
+        "points" : "}ewwFtwtbMw@dCd@{@OKDKh@gBf@_Bp@sB|BeHjAuDhDuKvBcHp@sBb@kAr@aCrE}NzAuEJFEADMPJvB^w]gUuMuIo@]w@Y}Ac@wEiAqBm@kBy@uDuByFaDqCqAgC}@sCs@gC]oGi@u@?o@Bi@JqBl@o@LgBBkYTqC?ySWiAEsBQcEi@wHwAgFmA}Ac@eAa@cAi@wU_PqI}G_Aw@_^sUu[{SWSs@c@q@_@q@YkAg@eAYmASgAI}ES{BUaA[oAs@mZaSd@QCF]Wu@c@lBcG"
+      },
+      "summary" : "",
+      "warnings" : [
+        "Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths."
+      ],
+      "waypoint_order" : []
+    },
+    {
+      "bounds" : {
+        "northeast" : {
+          "lat" : 40.8079657,
+          "lng" : -73.96245789999999
+        },
+        "southwest" : {
+          "lat" : 40.7503737,
+          "lng" : -74.0033115
+        }
+      },
+      "copyrights" : "Map data ©2020",
+      "legs" : [
+        {
+          "arrival_time" : {
+            "text" : "12:10am",
+            "time_zone" : "America/New_York",
+            "value" : 1588479041
+          },
+          "departure_time" : {
+            "text" : "11:34pm",
+            "time_zone" : "America/New_York",
+            "value" : 1588476865
+          },
+          "distance" : {
+            "text" : "5.2 mi",
+            "value" : 8399
+          },
+          "duration" : {
+            "text" : "36 mins",
+            "value" : 2176
+          },
+          "end_address" : "New York, NY 10027, USA",
+          "end_location" : {
+            "lat" : 40.8074166,
+            "lng" : -73.96245789999999
+          },
+          "start_address" : "Hudson Yards, New York, NY 10001, USA",
+          "start_location" : {
+            "lat" : 40.7563108,
+            "lng" : -74.0033115
+          },
+          "steps" : [
+            {
+              "distance" : {
+                "text" : "0.8 mi",
+                "value" : 1269
+              },
+              "duration" : {
+                "text" : "17 mins",
+                "value" : 994
+              },
+              "end_location" : {
+                "lat" : 40.750374,
+                "lng" : -73.991058
+              },
+              "html_instructions" : "Walk to 34 St - Penn Station",
+              "polyline" : {
+                "points" : "}ewwFtwtbMNg@BIDKRq@FUDK\\eADIJYDQJW~@sCFS`@sAFODSVw@J[\\gA`@qAFOt@_CPk@?APi@\\iAFQx@gC^kAJ]DOLa@`@oA?CDKHQ@GN_@FQFQHU\\kABMFSrAiEFOH[f@}A`@oANg@L_@DQPg@b@sADOb@qA@CPJvB^"
+              },
+              "start_location" : {
+                "lat" : 40.7563108,
+                "lng" : -74.0033115
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "0.7 mi",
+                    "value" : 1202
+                  },
+                  "duration" : {
+                    "text" : "15 mins",
+                    "value" : 926
+                  },
+                  "end_location" : {
+                    "lat" : 40.7510633,
+                    "lng" : -73.9908389
+                  },
+                  "html_instructions" : "Head \u003cb\u003esoutheast\u003c/b\u003e on \u003cb\u003eW 34th St\u003c/b\u003e toward \u003cb\u003e11th Ave\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                  "polyline" : {
+                    "points" : "}ewwFtwtbMNg@BIDKRq@FUDK\\eADIJYDQJW~@sCFS`@sAFODSVw@J[\\gA`@qAFOt@_CPk@?APi@\\iAFQx@gC^kAJ]DOLa@`@oA?CDKHQ@GN_@FQFQHU\\kABMFSrAiEFOH[f@}A`@oANg@L_@DQPg@b@sADOb@qA@C"
+                  },
+                  "start_location" : {
+                    "lat" : 40.7563108,
+                    "lng" : -74.0033115
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "220 ft",
+                    "value" : 67
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 68
+                  },
+                  "end_location" : {
+                    "lat" : 40.750374,
+                    "lng" : -73.991058
+                  },
+                  "html_instructions" : "Take entrance \u003cspan class=\"location\"\u003e7th Ave & 34th St at SW corner\u003c/span\u003e",
+                  "polyline" : {
+                    "points" : "qdvwFbjrbMvB^"
+                  },
+                  "start_location" : {
+                    "lat" : 40.75097050000001,
+                    "lng" : -73.9909036
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            },
+            {
+              "distance" : {
+                "text" : "4.3 mi",
+                "value" : 6924
+              },
+              "duration" : {
+                "text" : "17 mins",
+                "value" : 1020
+              },
+              "end_location" : {
+                "lat" : 40.80772,
+                "lng" : -73.964111
+              },
+              "html_instructions" : "Subway towards Van Cortlandt Park - 242 St",
+              "polyline" : {
+                "points" : "y`vwFbkrbMw]gUyKiH{@k@WOWMYM]Ki@Qs@QyCu@}@S}@Ws@U}@_@m@Yk@]iCwAwCaBaB_AuAo@{@a@_A_@gA]uAa@}@QaAOeAMgE]gAK]AW@W?WBSBUFgA\\i@NWHWBQ@uA@kYTqC?ySWiAEcAIo@GiAMyB[wHwAgFmAm@Oo@Sa@Oc@Qc@S_@U}ByAyQeMaCmBoEoD_Aw@_^sUQIc[qSKIKIMIKGMIKGKGMGKGKGKEKEMGKEKE_Aa@eAYmASgAI}ES_AG{@Mc@M]Me@Ui@]_C}AmVcP"
+              },
+              "start_location" : {
+                "lat" : 40.750374,
+                "lng" : -73.991058
+              },
+              "transit_details" : {
+                "arrival_stop" : {
+                  "location" : {
+                    "lat" : 40.80772,
+                    "lng" : -73.964111
+                  },
+                  "name" : "116 Street Station - Columbia University"
+                },
+                "arrival_time" : {
+                  "text" : "12:08am",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588478880
+                },
+                "departure_stop" : {
+                  "location" : {
+                    "lat" : 40.750374,
+                    "lng" : -73.991058
+                  },
+                  "name" : "34 St - Penn Station"
+                },
+                "departure_time" : {
+                  "text" : "11:51pm",
+                  "time_zone" : "America/New_York",
+                  "value" : 1588477860
+                },
+                "headsign" : "Van Cortlandt Park - 242 St",
+                "line" : {
+                  "agencies" : [
+                    {
+                      "name" : "MTA New York City Transit",
+                      "phone" : "1 (718) 330-1234",
+                      "url" : "http://www.mta.info/"
+                    }
+                  ],
+                  "color" : "#ee352e",
+                  "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/us-ny-mta/1.png",
+                  "name" : "1 Line",
+                  "short_name" : "1",
+                  "text_color" : "#ffffff",
+                  "url" : "http://web.mta.info/nyct/service/pdf/t1cur.pdf",
+                  "vehicle" : {
+                    "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/subway2.png",
+                    "name" : "Subway",
+                    "type" : "SUBWAY"
+                  }
+                },
+                "num_stops" : 11
+              },
+              "travel_mode" : "TRANSIT"
+            },
+            {
+              "distance" : {
+                "text" : "0.1 mi",
+                "value" : 206
+              },
+              "duration" : {
+                "text" : "3 mins",
+                "value" : 161
+              },
+              "end_location" : {
+                "lat" : 40.8074166,
+                "lng" : -73.96245789999999
+              },
+              "html_instructions" : "Walk to New York, NY 10027, USA",
+              "polyline" : {
+                "points" : "ggaxFtbmbMd@QCF]Wc@YQIBEbAaDd@{A"
+              },
+              "start_location" : {
+                "lat" : 40.80772,
+                "lng" : -73.964111
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "72 ft",
+                    "value" : 22
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 23
+                  },
+                  "end_location" : {
+                    "lat" : 40.807531,
+                    "lng" : -73.9640223
+                  },
+                  "html_instructions" : "Take exit \u003cspan class=\"location\"\u003eBroadway & 116th St at SE corner\u003c/span\u003e",
+                  "polyline" : {
+                    "points" : "ggaxFtbmbMd@Q"
+                  },
+                  "start_location" : {
+                    "lat" : 40.80772,
+                    "lng" : -73.964111
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "174 ft",
+                    "value" : 53
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 40
+                  },
+                  "end_location" : {
+                    "lat" : 40.8079657,
+                    "lng" : -73.96376409999999
+                  },
+                  "html_instructions" : "Head \u003cb\u003enortheast\u003c/b\u003e on \u003cb\u003eBroadway\u003c/b\u003e toward \u003cb\u003eW 116th St\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "efaxFjbmbM]Wc@YQI"
+                  },
+                  "start_location" : {
+                    "lat" : 40.8075462,
+                    "lng" : -73.96405759999999
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "430 ft",
+                    "value" : 131
+                  },
+                  "duration" : {
+                    "text" : "2 mins",
+                    "value" : 98
+                  },
+                  "end_location" : {
+                    "lat" : 40.8074166,
+                    "lng" : -73.96245789999999
+                  },
+                  "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at \u003cb\u003eW 116th St\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "yhaxFn`mbMBEbAaDd@{A"
+                  },
+                  "start_location" : {
+                    "lat" : 40.8079657,
+                    "lng" : -73.96376409999999
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            }
+          ],
+          "traffic_speed_entry" : [],
+          "via_waypoint" : []
+        }
+      ],
+      "overview_polyline" : {
+        "points" : "}ewwFtwtbM~AaF|AwEv@kCrDkLpDiLrA}D`EwMdDgK@CPJvB^em@m`@q@[gA]mEgA{Bk@qBu@yAw@aHyDaB_AuAo@{BaA}C_A_Ca@mGk@eBMo@@k@F}Ad@aAXi@Da\\VqC?ySWmCOyBUyB[wHwAuG}AqAc@gAe@}CoByQeMaCmBoGgFq^}Ui\\oTcB_Aq@Y_Aa@eAYmASgAI}ES_AG{@Mc@McAc@iD{BmVcPd@QCFaAq@QIBEhB}F"
+      },
+      "summary" : "",
+      "warnings" : [
+        "Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths."
+      ],
+      "waypoint_order" : []
+    }
+  ],
+  "status" : "OK"
+}
