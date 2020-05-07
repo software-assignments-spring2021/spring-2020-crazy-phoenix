@@ -45,14 +45,16 @@ function DetailedRoute(props){
   }
 
     return(
+      <header id='detailedRoute'>
         <div>
-          <Link to ={{pathname: "/possibleRoutes"}}>
+          {/* <Link to ={{pathname: "/possibleRoutes"}}>
             <button type ="button">Back</button>
-          </Link>
+          </Link> */}
         <div className = "Stops">
           {displayStops}
         </div>
         </div>
+        </header>
     )
   }
 
