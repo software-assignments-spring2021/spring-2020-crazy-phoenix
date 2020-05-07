@@ -70,9 +70,6 @@ function SignupForm(props){
                     <label for="loginEmail"><b>Email</b></label>
                     <input type='text' id='signUpEmail'  className='signupI' onChange={emailHandleChange}/><br/>
 
-                    <label for="loginEmail"><b>Username</b></label>
-                    <input type='text' id='username'  className='signupI' /><br/>
-
                     <label for="loginEmail"><b>Password</b></label>
                     <input type='text' id='password'  className='signupI' onChange={passwordHandleChange}/><br/>
                         

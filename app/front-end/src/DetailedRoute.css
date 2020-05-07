@@ -14,7 +14,7 @@
     border-style: solid;
     border-color: black;
     padding: 1em;
-    background-color:#4CAF50;
+    background-color:rgb(114, 176, 192);
 }
 
 .Arrow {
@@ -23,7 +23,7 @@
 }
 
 header#detailedRoute{
-    background-color: #4CAF50;
+    background-color: rgb(150, 206, 219);
     min-height: 100vh;
     display: flex;
     flex-direction: column;

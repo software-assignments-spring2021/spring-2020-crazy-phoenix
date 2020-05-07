@@ -70,14 +70,9 @@ function LoginForm(props){
           </div>
 
           </form>
-         
-         
-         
-         
-         
-         
-         
+        
 
+        
          
           </div>
           
