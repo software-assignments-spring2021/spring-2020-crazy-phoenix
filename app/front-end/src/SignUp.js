@@ -62,19 +62,19 @@ function SignupForm(props){
                 </div>
                 <div class ='container'>
                     <label for="email"><b>First Name</b></label>
-                    <input type='text' id='inputEmail' name='email' onChange={emailHandleChange}/><br/>
+                    <input type='text' id='inputEmail' name='email' onChange={firstHandleChange}/><br/>
            
                     <label for="loginEmail"><b>Last Name</b></label>
-                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+                    <input type='text' id='inputPassword' name='password' onChange={lastHandleChange}/><br/>
 
                     <label for="loginEmail"><b>Username</b></label>
-                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+                    <input type='text' id='inputPassword' name='password' onChange={emailHandleChange}/><br/>
 
                     <label for="loginEmail"><b>Password</b></label>
                     <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
 
                     <label for="loginEmail"><b>Confirm Password</b></label>
-                    <input type='text' id='inputPassword' name='password' onChange={passwordHandleChange}/><br/>
+                    <input type='text' id='inputPassword' name='password' onChange={password2HandleChange}/><br/>
 
                     <button  type='submit'>Sign Up</button>
                 </div>
