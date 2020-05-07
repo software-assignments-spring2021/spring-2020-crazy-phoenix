@@ -16,6 +16,7 @@
   border-radius: 8px;
 
 }
+
 .content {
 
   font-family: 'Bookman old style', Helvetica, sans-serif;
@@ -31,7 +32,7 @@
 }
 
 header#possibleRoutes{
-  background-color: #4CAF50;
+  background-color: rgb(150, 206, 219);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

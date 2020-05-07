@@ -53,8 +53,8 @@ const PossibleRoutes = (props) => {
   return (
     <header id='possibleRoutes'>
     <div className="possibleRoutes">
-    <Link to="/Home"><div class="bk-btn"><div class="bk-btn-triangle"></div><div class="bk-btn-bar"></div></div></Link>
-      <h1>possible routes</h1>
+    <Link to="/Home"><div className="bk-btn"><div className="bk-btn-triangle"></div><div className="bk-btn-bar"></div></div></Link>
+      <h1>Possible Routes</h1>
       <section className="content">
         {routeObjectStringArray.map(routeString => (
           <div class='smallContent'>

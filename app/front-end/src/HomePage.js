@@ -33,7 +33,7 @@ function HomePage(props) {
 
         <label for="destination"><b>To</b></label> 
         <input type='text' id='destination' name='destination' className='destinationI' onChange={destinationHandleChange}/><br/>
-
+    
         <button  type='submit'>Go</button>
         </div>  
       </form>
