@@ -45,6 +45,7 @@ function DetailedRoute(props){
   }
 
     return(
+      <header id='detailedRoute'>
         <div>
           <Link to ="/possibleRoutes">
             <button type ="button">Back</button>
@@ -53,6 +54,7 @@ function DetailedRoute(props){
           {displayStops}
         </div>
         </div>
+        </header>
     )
   }
 
