@@ -33,10 +33,10 @@ passport.deserializeUser(User.deserializeUser());
 // connecting to db
 let dbUrl = '';
 // testing environment
-if (process.env.PRODUCTION === '0') {
-  dbUrl = `mongodb://localhost/group_project`;
-} else {
+if (!process.env.PRODUCTION || process.env.PRODUCTION !== '0') {
   dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
+} else {
+  dbUrl = `mongodb://localhost/group_project`;
 }
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
   if (err) {
