@@ -7,27 +7,17 @@
 
 
 .route {
-    border: px solid blue;
+    border-bottom: 20px solid blue;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: #8B008B;
-    border-radius: 8px;
-  
+    align-items: flex-start;
+    justify-content: space-between;
 }
 .content {
-
-    font-family: 'Bookman old style', Helvetica, sans-serif;
-    color: black; 
+    color: rgba(0, 0, 0, 0.63);
     margin: 50px auto;
     width: 640px;
     
-}
-
-.padd{
-    margin: 2px auto;
-    padding:10px;
 }
 
 header#possibleRoutes{
@@ -40,6 +30,7 @@ header#possibleRoutes{
     font-size: calc(10px + 2vmin);
     color: white;
   }
+
     
   .smallContent{
     margin: 20px auto;
@@ -74,3 +65,4 @@ header#possibleRoutes{
     top: 52px*-0.07;
     left: 52px*0.44;
   }
+

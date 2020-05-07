@@ -17,15 +17,7 @@ header#login{
   border: 2px solid #632929 ;
 }
 
-input.usernameI[type=text]  , input[type=password] {
-  width: 94%;
-  padding: 12px 10px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-input.passwordI[type=text]  , input[type=password] {
+input[type=text], input[type=password] {
   width: 94%;
   padding: 12px 10px;
   margin: 8px 0;
@@ -36,7 +28,6 @@ input.passwordI[type=text]  , input[type=password] {
 
 label{
   padding: 10px 10px;
-  
 }
 button {
   background-color: #4CAF50;
