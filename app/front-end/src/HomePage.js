@@ -3,6 +3,7 @@ import './HomePage.css';
 
 
 const apiKey = process.env.API_KEY;
+//const apiKey = key.API_KEY;
 const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=' + apiKey;
 
 
