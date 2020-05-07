@@ -1,6 +1,6 @@
 FROM node:12
 
-WORKDIR /usr/src/app/front-end
+WORKDIR /usr/src/app/deploy_front-end
 
 RUN npm install
 

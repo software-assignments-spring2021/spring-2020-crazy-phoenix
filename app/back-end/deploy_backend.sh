@@ -1,5 +1,5 @@
 #!/bin/sh
-IMAGE_NAME="ayakoohara/back-end"
+IMAGE_NAME="ayakoohara/deploy_back-end"
 IMAGE_TAG=$(git rev-parse --short HEAD)
 
 echo "Back-end building docker image ${IMAGE_NAME}:${IMAGE_TAG}"
@@ -11,13 +11,15 @@ echo "${DOCKER_PASS}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
 docker push "${IMAGE_NAME}:${IMAGE_TAG}"
 docker push "${IMAGE_NAME}:latest"
 
-base64 --decode ubuntu-droplet >ssh_key
+echo "${SSH_KEY}" | base64 -d > ssh_key
 chmod 600 ssh_key
 
-echo "${SERVER_PUBLIC_KEY}" | base64 --decode >>~/.ssh/known_hosts
+echo "${SERVER_PUBLIC_KEY}" | base64 -d >> ~/.ssh/known_hosts
+
+cat ~/.ssh/known_hosts
 
 echo "Deploy with remote SSH"
 ssh -i ssh_key "root@${SERVER_IP}" \
-"docker pull ${IMAGE_NAME}:${IMAGE_TAG} && docker stop live-container && docker rm live-container && docker run --init -d --name live-container -p 3000:3000 ${IMAGE_NAME}:${IMAGE_TAG} && docker system prune -af"
+"docker pull ${IMAGE_NAME}:${IMAGE_TAG} && docker stop live-container && docker rm live-container && docker run --init -d --name live-container -p 9000:9000 ${IMAGE_NAME}:${IMAGE_TAG} && docker system prune -af"
 
 echo "deployment success"
