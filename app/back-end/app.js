@@ -29,8 +29,13 @@ passport.deserializeUser(User.deserializeUser());
 
 
 // connecting to db
-//const dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
-const dbUrl = `mongodb://localhost/group_project`;
+let dbUrl = '';
+// testing environment
+if (process.env.PRODUCTION === '0') {
+  dbUrl = `mongodb://localhost/group_project`;
+} else {
+  dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
+}
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
   if (err) {
     console.log('Could not connect to database');
