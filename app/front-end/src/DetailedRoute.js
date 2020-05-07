@@ -46,7 +46,7 @@ function DetailedRoute(props){
 
     return(
         <div>
-          <Link to ="/possibleRoutes">
+          <Link to ={{pathname: "/possibleRoutes"}}>
             <button type ="button">Back</button>
           </Link>
         <div className = "Stops">
