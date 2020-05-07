@@ -5,25 +5,9 @@ import Profile from './UserProfile.js';
 import PossibleRoutes from './possibleRoutes';
 import LoginContainer from './LoginContainer';
 import SignUpContainer from './SignUpContainer';
-import logo from './logo.svg';
 import './App.css';
 import HomePageContainer from "./HomePageContainer";
 import PossibleRoutesContainer from './PossibleRoutesContainer';
-/*
-    state = {
-      hamburgerOpen: false
-    };
-    hamburgerHandler = () => {
-      this.setState((prevState) => {
-        return {hamburgerOpen: !prevState.hamburgerOpen};
-      });
-    };
-
-    render(){
-    let hamburger;
-    if(this.state.hamburgerOpen){
-      hamburger = <Profile hamburgerHandler={this.hamburgerHandler}/>;
-    }*/
 
 
 function App(props) {
