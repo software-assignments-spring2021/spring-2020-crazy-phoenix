@@ -1,13 +1,15 @@
-import React, {Component, useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
 import './HomePage.css';
 import { slide as Menu } from 'react-burger-menu'
 import PossibleRoutes from './possibleRoutes';
 import background from './backgroundImage.jpg';
 
-import key from './config';
-const apiKey = key.API_KEY;
+// import key from './config';
+// const apiKey = key.API_KEY;
 const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=AIzaSyDx0uVQTk3Ukph1ph9ppl97vC3M7rVKJ6U' + apiKey;
+
+const apiKey = process.env.API_KEY;
+const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=' + apiKey;
 
 
 let origin, destination;

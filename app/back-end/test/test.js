@@ -108,7 +108,7 @@ describe('function to filter out inaccessible routes', () => {
     const value = filterRoutes(stubRoute);
     assert(value.length === 0);
   });
-  it('should return an empty array when there are accessible routes that uses the subway', function() {
+  it('should return an array when there are accessible routes that uses the subway', function() {
     const value = filterRoutes(stubRoute2);
     assert(value.length > 0);
   });
