@@ -31,17 +31,15 @@ function HomePage(props) {
       <Menu id = "Burger">
       </Menu>
       <form onSubmit={handleSubmit} className = "Search-form">
-
-        <div className='homeContainer'>
-        <label for="origin"><b>From</b></label>
-        <input type='text' id='origin' name='origin' className='originI' onChange={originHandleChange}/><br/>
-
-        <label for="destination"><b>To</b></label> 
-        <input type='text' id='destination' name='destination' className='destinationI' onChange={destinationHandleChange}/><br/>
-
-        <button  type='submit'>Go</button>
-        </div>  
-
+        <label id = "From-bar">
+          <div id = "From-text">From</div>
+          <input name="origin" onChange={originHandleChange} type = "text" style ={{width: 300}}/>
+        </label>
+        <label id = "To-bar">
+          <div id ="To-text"> To</div>
+          <input name="desto" onChange={destinationHandleChange} type = "text" style ={{width: 300}}/>
+        </label>
+        <input type="submit" style={{marginLeft: 10}} value="GO" />
       </form>
       <img src = {mapUrl} alt = "Map of NYC"/>
     </div>
