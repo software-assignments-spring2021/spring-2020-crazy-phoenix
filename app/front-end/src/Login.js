@@ -19,7 +19,7 @@ const divStyle = {
 function LoginForm(props){
   const handleSubmit = (event) => {
     event.preventDefault();
-    const url = 'http://localhost:3000/authenticate/?email=' + email + '&password=' + password;
+    const url = 'http://localhost:9000/authenticate/?email=' + email + '&password=' + password;
     fetch(url)
       .then(res => res.text())
       .then(res => {

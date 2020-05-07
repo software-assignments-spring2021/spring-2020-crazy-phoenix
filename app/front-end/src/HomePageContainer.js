@@ -5,7 +5,7 @@ import HomePage from "./HomePage";
 let routes = [];
 // query here back-end
 const callApi = (origin, destination) => {
-  const url = `http://localhost:3000/data/?origin=${origin}&destination=${destination}`;
+  const url = `http://localhost:9000/data/?origin=${origin}&destination=${destination}`;
   fetch(url)
     .then(res => res.json())
     .then(json => {
@@ -22,7 +22,7 @@ const HomePageContainer = (props) => {
   const change = (origin, destination) => {
     const searchString = `?origin=${origin}&destination=${destination}`;
 
-    const url = `http://localhost:3000/data/?origin=${origin}&destination=${destination}`;
+    const url = `http://localhost:9000/data/?origin=${origin}&destination=${destination}`;
     fetch(url)
       .then(res => res.json())
       .then(json => {
