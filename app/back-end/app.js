@@ -29,10 +29,7 @@ passport.deserializeUser(User.deserializeUser());
 
 
 // connecting to db
-//const dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
-
-// for travis tests
-const dbUrl = 'mongodb://localhost/group_project';
+const dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
   if (err) {
     console.log('Could not connect to database');
