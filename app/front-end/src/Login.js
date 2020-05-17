@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import appLogo from  './appLogo.png'
 import './Login.css'
 import ToggleButton from'./ToggleButton.js'
 
@@ -57,14 +58,14 @@ function LoginForm(props){
          
           <form id='login' className='loginForm' onSubmit={handleSubmit}>
           <div class="logocontainer">
-          <img src="img_avatar2.png" alt="Logo" class="avatar"></img>
+          <img src={appLogo} alt="Logo" class="avatar"></img>
           </div>
           <div class ='container'>
-            <label for="email"><b>Username</b></label>
+            <label for="email"><b>Email</b></label>
             <input type='text' id='inputEmail' name='email' className='usernameI' onChange={emailHandleChange}/><br/>
            
             <label for="loginEmail"><b>Password</b></label>
-            <input type='text' id='inputPassword' name='password' className='passwordI' onChange={passwordHandleChange}/><br/>
+            <input type='password' id='inputPassword' name='password' className='passwordI' onChange={passwordHandleChange}/><br/>
            
             <button  type='submit'>Login</button>
           </div>

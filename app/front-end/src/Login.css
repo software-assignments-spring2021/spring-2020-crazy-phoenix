@@ -79,6 +79,11 @@ img.avatar {
   margin: 50px auto;
   width: 640px;
 }
+.logocontainer {
+  text-align: center;
+  margin: 50px auto;
+  width: 640px;
+}
 .welcome{
   justify-content: center;
   text-align: center

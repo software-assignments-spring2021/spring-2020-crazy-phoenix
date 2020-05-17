@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './SignUp.css';
+import appLogo from './appLogo.png';
 
 // TODO: username field is not used (might be wise to remove)
 let first, last, email, password, password2;
@@ -58,7 +59,7 @@ function SignupForm(props){
           
           <form id='login' className='signupForm' onSubmit={handleSubmit}>
                 <div class="logocontainer">
-                    <img src="img_avatar2.png" alt="Avatar" class="avatar"></img>
+                    <img src={appLogo} alt="Avatar" class="avatar"></img>
                 </div>
                 <div class ='container'>
                     <label for="email"><b>First Name</b></label>
