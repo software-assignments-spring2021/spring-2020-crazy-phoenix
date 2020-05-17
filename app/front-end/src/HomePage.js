@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.css';
-
+import Hamburger from './hamburgerMenu.js';
 
 const apiKey = process.env.API_KEY;
 //const apiKey = key.API_KEY;
@@ -25,7 +25,7 @@ function HomePage(props) {
   return (
     
     <header className='home'>
-
+      <Hamburger/>
       <div className='homeForm'>
       <form onSubmit={handleSubmit} className = "Search-form">
         <div className='homeContainer'>
