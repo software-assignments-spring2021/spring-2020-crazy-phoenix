@@ -114,3 +114,15 @@ border-radius: 50%;
   top: 52px*-0.07;
   left: 52px*0.44;
 }
+
+#routelink{
+  display: block;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	float: right;
+	color: white;
+	padding: 5px 5px;
+	background-color: #00aedb;
+	border-radius: 5px;
+  text-align: center;
+}

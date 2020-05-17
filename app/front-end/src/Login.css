@@ -86,5 +86,33 @@ img.avatar {
 }
 .welcome{
   justify-content: center;
-  text-align: center
+  text-align: center  
+}
+
+#welcome{
+  font-family: 'Fugaz One', cursive;
+  color: #04a00c;
+}
+
+#please{
+  font-family: 'Fugaz One';
+  color: #0d9b14;
+}
+
+#signupOpt{
+  font-family: 'Fugaz One';
+  color: #0448a0;
+}
+
+#signup-opt {
+	display: block;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	float: right;
+	color: white;
+	margin-right: 2%;
+	padding: 5px 5px;
+	background-color: #8b0553;
+	border-radius: 5px;
+	text-align: center;
 }

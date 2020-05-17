@@ -1,6 +1,8 @@
 import React from 'react';
 import './DetailedRoute.css';
 import { BrowserRouter as Link } from "react-router-dom";
+import Hamburger from './hamburgerMenu.js';
+import Toolbar from './toolbar.js';
 
 function DetailedRoute(props){
   const object = JSON.parse(props.location.state.routeString);
@@ -46,6 +48,7 @@ function DetailedRoute(props){
 
     return(
       <header id='detailedRoute'>
+      <Toolbar/>
         <div>
           {/* <Link to ={{pathname: "/possibleRoutes"}}>
             <button type ="button">Back</button>
