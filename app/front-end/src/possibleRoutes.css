@@ -1,10 +1,6 @@
 
 
-.back_icon {
-  color: black;
-}
-
-
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
 .route {
   border: px solid blue;
@@ -51,24 +47,6 @@ header#possibleRoutes{
   align-items: center;
 }
 
-/*.bk-btn {
-height: 52px;
-width: 52px;
-background-color: black;
-border-radius: 50%;
-}*/
-
-/*.bk-btn-triangle {
-  position: relative;
-  top: 52px*0.25;
-  left: 52px*0.2;
-  width: 0; 
-  height: 0; 
-  border-top: 52px*0.25 solid transparent;
-  border-bottom: 52px*0.25 solid transparent; 
-  border-right: 52px*0.25 solid white; 
-}*/
-
 .bk-btn {
   display: inline-block;
 	background: rgb(58, 118, 167);
@@ -113,4 +91,16 @@ border-radius: 50%;
   width: 52px*0.25;
   top: 52px*-0.07;
   left: 52px*0.44;
+}
+
+#routelink{
+  display: block;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	float: right;
+	color: white;
+	padding: 5px 5px;
+	background-color: #00aedb;
+	border-radius: 5px;
+  text-align: center;
 }

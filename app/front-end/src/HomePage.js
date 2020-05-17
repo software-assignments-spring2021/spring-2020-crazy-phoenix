@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomePage.css';
 import Hamburger from './hamburgerMenu.js';
-
+import Toolbar from './toolbar.js';
 const apiKey = process.env.API_KEY;
 //const apiKey = key.API_KEY;
 const mapUrl = 'https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=1200x800&maptype=roadmap&key=' + apiKey;
@@ -25,7 +25,8 @@ function HomePage(props) {
   return (
     
     <header className='home'>
-      <Hamburger/>
+      <Toolbar/>
+  
       <div className='homeForm'>
       <form onSubmit={handleSubmit} className = "Search-form">
         <div className='homeContainer'>

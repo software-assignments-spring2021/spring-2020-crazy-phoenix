@@ -1,5 +1,72 @@
-header#toolbar{
-    position:fixed;
-    width: 100%;
-    color: #008B8B;
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+body{
+	margin: 0;
 }
+
+
+
+.navBar{
+	background-color:#8B008B;
+	overflow: hidden;
+	padding-top: 0px;
+	padding-bottom: 10px;
+	width: 100%;
+	margin: 0;
+	border-bottom: 4px solid rgb(150, 206, 219);
+}
+
+#applogo{
+	display: block;
+	float: left;
+	padding-top: .5%;
+	margin-left: 17%;
+	margin-top: 0px;
+}
+
+#appname {
+	font-family: 'Fugaz One', cursive;
+	color: #4bd452;
+	width: 55%;
+	margin-right: 0%;
+    margin-left: 22%;
+	margin-top: 0%;
+	margin-bottom: 0%;
+	display: block;
+	float: left;
+	margin-top: 10px;
+    text-align: center;
+}
+
+#applogo {
+  height: 70px;
+  width: 70px;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+}
+
+@media screen and (min-width: 416px) {
+    #appname {
+      font-size: 200%;
+      line-height:40px;
+    }
+  
+    #applogo {
+      height: 50px;
+      width: 60px;
+      box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+    }   
+  }
+
+@media screen and (max-width: 415px) {
+    #appname {
+      font-size: 150%;
+      line-height: 30px;
+    }
+  
+    #applogo {
+      height: 30px;
+      margin-left: 45px;
+      width: 30px;
+      box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+    }
+  
+  }

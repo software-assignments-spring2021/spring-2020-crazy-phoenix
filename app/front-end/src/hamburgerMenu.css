@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 .bm-item {
     display: inline-block;
   
@@ -27,7 +27,7 @@
   
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    background: #00aedb;
+    background: #4bd452;
   }
   
   /* Position and sizing of clickable cross button */
@@ -43,7 +43,7 @@
   
   /* General sidebar styles */
   .bm-menu {
-    background: #8B008B;
+    background: rgb(212, 15, 212);
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
   }
@@ -68,7 +68,7 @@
         width: 36px;
         height: 30px;
         left: 36px;
-        top: 36px;
+        top: 20px;
       }
   
   }

@@ -48,7 +48,8 @@ function SignupForm(props){
         <div className='container'>
         <div className='blur'>
         <div className='welcome'>
-        <h2>Welcome</h2>
+        <h1 id='welcome'>Welcome To Mobility</h1>
+        <h3 id='please'>Sign Up and Get Going</h3>
         </div>
         
         </div>
@@ -84,7 +85,8 @@ function SignupForm(props){
           </div>
           
         </div>
-        <Link to='/Login' id = "signupLink">Sign In</Link>
+        <div id='signinOpt'>Already have an account?</div>
+        <a id="signin-opt" href="/Login"> Sign In </a>
         </header>
 
     )
