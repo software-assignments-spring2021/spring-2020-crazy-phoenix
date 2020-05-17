@@ -40,22 +40,14 @@ function LoginForm(props){
         <div className='container'>
         <div className='blur'>
         <div className='welcome'>
-        <h2>Welcome</h2>
+        <h1 id='welcome'>Welcome To Mobility</h1>
+        <h3 id='please'>Please Sign In</h3>
         </div>
         
         </div>
           
-
-        
           <div className='form'>
-          
 
-
-
-
-         
-         
-         
           <form id='login' className='loginForm' onSubmit={handleSubmit}>
           <div class="logocontainer">
           <img src={appLogo} alt="Logo" class="avatar"></img>
@@ -69,16 +61,13 @@ function LoginForm(props){
            
             <button  type='submit'>Login</button>
           </div>
-
           </form>
-        
 
-        
-         
           </div>
           
         </div>
-        <Link to='/SignUp' id = "signupLink">Sign Up</Link>
+        <div id='signupOpt'>Dont't have an account?</div>
+        <a id="signup-opt" href="/SignUp"> Sign Up </a>
         </header>
     
       );
