@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 .bm-item {
     display: inline-block;
   
@@ -43,7 +43,7 @@
   
   /* General sidebar styles */
   .bm-menu {
-    background: #8B008B;
+    background: rgb(212, 15, 212);
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
   }
