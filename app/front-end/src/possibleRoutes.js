@@ -1,6 +1,8 @@
 import React, {Component, useState, useEffect} from 'react';
 import './possibleRoutes.css';
 import {Link} from "react-router-dom";
+import Hamburger from './hamburgerMenu.js';
+import Toolbar from './toolbar.js';
 
 // return string of route to display
 const getShortRoute = (routeObjectString) => { console.log(routeObjectString);
@@ -52,6 +54,7 @@ const PossibleRoutes = (props) => {
 
   return (
     <header id='possibleRoutes'>
+    <Toolbar/>
     <div className="possibleRoutes">
     <Link to="/Home"><div className="bk-btn"><div className="bk-btn-triangle"></div><div className="bk-btn-bar"></div></div></Link>
       <h1>Possible Routes</h1>
@@ -59,7 +62,7 @@ const PossibleRoutes = (props) => {
         {routeObjectStringArray.map(routeString => (
           <div class='smallContent'>
           <section className="route"><div className='padd'>{getShortRoute(routeString)}
-           <Link to={{pathname: '/Route', state: {routeString}}}>select</Link></div>
+           <Link to={{pathname: '/Route', state: {routeString}}} id='routelink'>select</Link></div>
           </section>
           </div>
 

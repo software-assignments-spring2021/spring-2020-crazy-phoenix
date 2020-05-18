@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
 header#signup{
 
 
@@ -82,3 +84,31 @@ header#signup{
     text-align: center;
   }
   
+  #welcome{
+    font-family: 'Fugaz One', cursive;
+    color: #04a00c;
+  }
+  
+  #please{
+    font-family: 'Fugaz One';
+    color: #0d9b14;
+  }
+
+  #signinOpt{
+    font-family: 'Fugaz One';
+    color: #0448a0;
+  }
+  
+  #signin-opt {
+    display: block;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    float: right;
+    color: white;
+    margin-right: 2%;
+    margin-bottom: 5%;
+    padding: 5px 5px;
+    background-color: #8B008B;
+    border-radius: 5px;
+    text-align: center;
+  }

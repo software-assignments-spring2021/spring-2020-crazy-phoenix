@@ -1,20 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
-.App {
-    background-color: wheat;
-}
+header#detailedRoute{
+    background-color: rgb(150, 206, 219);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
 
 .Stops {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color:#8B008B;
+    background-color:rgb(150, 206, 219);
 }
 .Stop {
     border: 2px;
     border-style: solid;
     border-color: black;
     padding: 1em;
-    background-color:rgb(114, 176, 192);
+    background-color:#8B008B;
 }
 
 .Arrow {
@@ -28,7 +36,6 @@ header#detailedRoute{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
   }

@@ -1,10 +1,6 @@
 
 
-.back_icon {
-  color: black;
-}
-
-
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
 .route {
   border: px solid blue;
@@ -37,7 +33,6 @@ header#possibleRoutes{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -52,20 +47,41 @@ header#possibleRoutes{
 }
 
 .bk-btn {
-height: 52px;
-width: 52px;
-background-color: black;
-border-radius: 50%;
-}
+  display: inline-block;
+	background: rgb(58, 118, 167);
+	margin: 0 auto;
+	padding: 37px 28px;
+	border-radius: 50%;
+  }
+
 .bk-btn-triangle {
-  position: relative;
-  top: 52px*0.25;
-  left: 52px*0.2;
-  width: 0; 
-  height: 0; 
-  border-top: 52px*0.25 solid transparent;
-  border-bottom: 52px*0.25 solid transparent; 
-  border-right: 52px*0.25 solid white; 
+	position: relative;
+	display: block;
+	width: 20px;
+	height: 2px;
+	background-color: #41C2B1;
+}
+
+.bk-btn-triangle:before,
+.bk-btn-triangle:after {
+	content: '';
+	position: absolute;
+}
+.bk-btn-triangle:before {
+	top: -5px;
+	left: -8px;
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent; 
+	border-right:8px solid #41C2B1; 
+}
+.bk-btn-triangle:after {
+	width: 2px;
+	height: 10px;
+	background-color: #41C2B1;
+	right: -2px;
+	top: -4px;
 }
 .bk-btn-bar {
   position: relative;
@@ -74,4 +90,16 @@ border-radius: 50%;
   width: 52px*0.25;
   top: 52px*-0.07;
   left: 52px*0.44;
+}
+
+#routelink{
+  display: block;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	float: right;
+	color: white;
+	padding: 5px 5px;
+	background-color: #00aedb;
+	border-radius: 5px;
+  text-align: center;
 }

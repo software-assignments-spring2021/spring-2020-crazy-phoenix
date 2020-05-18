@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './SignUp.css';
+import appLogo from './appLogo.png';
 
 // TODO: username field is not used (might be wise to remove)
 let first, last, email, password, password2;
@@ -47,7 +48,8 @@ function SignupForm(props){
         <div className='container'>
         <div className='blur'>
         <div className='welcome'>
-        <h2>Welcome</h2>
+        <h1 id='welcome'>Welcome To Mobility</h1>
+        <h3 id='please'>Sign Up and Get Going</h3>
         </div>
         
         </div>
@@ -58,7 +60,7 @@ function SignupForm(props){
           
           <form id='login' className='signupForm' onSubmit={handleSubmit}>
                 <div class="logocontainer">
-                    <img src="img_avatar2.png" alt="Avatar" class="avatar"></img>
+                    <img src={appLogo} alt="Avatar" class="avatar"></img>
                 </div>
                 <div class ='container'>
                     <label for="email"><b>First Name</b></label>
@@ -71,10 +73,10 @@ function SignupForm(props){
                     <input type='text' id='signUpEmail'  className='signupI' onChange={emailHandleChange}/><br/>
 
                     <label for="loginEmail"><b>Password</b></label>
-                    <input type='text' id='password'  className='signupI' onChange={passwordHandleChange}/><br/>
+                    <input type='password' id='password'  className='signupI' onChange={passwordHandleChange}/><br/>
                         
                     <label for="loginEmail"><b>Confirm Password</b></label>
-                    <input type='text' id='confirmPassword'  className='signupI' onChange={password2HandleChange}/><br/>
+                    <input type='password' id='confirmPassword'  className='signupI' onChange={password2HandleChange}/><br/>
 
                     <button  type='submit'>Sign Up</button>
                 </div>
@@ -83,7 +85,8 @@ function SignupForm(props){
           </div>
           
         </div>
-        <Link to='/Login' id = "signupLink">Sign In</Link>
+        <div id='signinOpt'>Already have an account?</div>
+        <a id="signin-opt" href="/Login"> Sign In </a>
         </header>
 
     )
