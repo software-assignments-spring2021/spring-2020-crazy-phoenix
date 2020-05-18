@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.urlencoded({ extended: false }));
 
 let apiKey;
-if (process.env.API_KEY) {
+if (process.env.NODE_ENV === 'PRODUCTION') {
   apiKey = process.env.API_KEY;
 } else {
   const fn = './config.json';
