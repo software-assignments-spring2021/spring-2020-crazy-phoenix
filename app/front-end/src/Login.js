@@ -66,7 +66,7 @@ function LoginForm(props){
           </div>
           
         </div>
-        <div id='signupOpt'>Dont't have an account?</div>
+        <div id='signupOpt'>Don't have an account?</div>
         <a id="signup-opt" href="/SignUp"> Sign Up </a>
         </header>
     
