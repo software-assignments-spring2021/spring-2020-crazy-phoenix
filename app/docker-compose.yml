@@ -1,0 +1,30 @@
+version: "2"
+services:
+  back-end:
+    image: back-end
+    build: ./back-end
+    ports:
+    - "9000:9000"
+    depends_on:
+    - mongo
+    networks:
+    - crazy_phoenix
+  front-end:
+    image: front-end
+    build: ./front-end
+    ports:
+    - "3000:3000"
+    depends_on:
+    - back-end
+    stdin_open: true
+    networks:
+    - crazy_phoenix
+  mongo:
+    image: mongo
+    ports:
+    - "27017:27017"
+    networks:
+    - crazy_phoenix
+networks:
+  crazy_phoenix:
+    driver: bridge
