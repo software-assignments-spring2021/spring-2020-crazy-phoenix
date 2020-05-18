@@ -2,6 +2,8 @@ FROM node:12
 
 WORKDIR /usr/src/app/front-end
 
+COPY package*.json ./
+
 RUN npm install
 
 COPY . .

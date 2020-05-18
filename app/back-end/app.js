@@ -7,19 +7,23 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const { getAccessibleRouteList } = require('./filter');
-
+const fs = require('fs');
 
 const app = express();
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors());
 app.use(express.urlencoded({extended: false}));
-//const fn = './config.json';
-//const key = fs.readFileSync(fn);
-//const conf = JSON.parse(key);
-//const apiKey = conf.API_KEY;
+
 app.use(express.urlencoded({ extended: false }));
 
-const apiKey = process.env.API_KEY;
-//const apiKey = require('config.json').API_KEY;
+let apiKey;
+if (process.env.NODE_ENV === 'PRODUCTION') {
+  apiKey = process.env.API_KEY;
+} else {
+  const fn = './config.json';
+  const key = fs.readFileSync(fn);
+  const conf = JSON.parse(key);
+  apiKey = conf.API_KEY;
+}
 
 // schema
 const User = require('./db.js');
@@ -33,17 +37,17 @@ passport.deserializeUser(User.deserializeUser());
 
 // connecting to db
 let dbUrl = '';
-// testing environment
-if (!process.env.PRODUCTION || process.env.PRODUCTION !== '0') {
-  dbUrl = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`;
+if (process.env.NODE_ENV === 'PRODUCTION') { // localhost in travis
+  dbUrl = `mongodb://localhost/test`;
 } else {
-  dbUrl = `mongodb://localhost/group_project`;
+  dbUrl = `mongodb://172.17.0.1:27017/container`; // for container use
 }
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
   if (err) {
     console.log('Could not connect to database');
+  } else {
+    console.log('Successfully connected to DB');
   }
-  console.log('Successfully connected to DB');
 });
 
 // avoid deprecation warning for collection.ensureIndex
