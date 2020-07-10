@@ -29,7 +29,7 @@ function SignupForm(props){
         } else if (password !== password2) {
             alert('passwords do not match');
         } else {
-            const url = `http://45.55.32.124:9000/signup/?firstname=${first}&lastname=${last}&email=${email}&password=${password}`;
+            const url = `http://localhost:9000/signup/?firstname=${first}&lastname=${last}&email=${email}&password=${password}`;
             fetch(url)
               .then(res => res.text())
               .then(res => {

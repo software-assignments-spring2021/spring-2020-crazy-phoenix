@@ -10,7 +10,7 @@ const HomePageContainer = (props) => {
   const change = (origin, destination) => {
     const searchString = `?origin=${origin}&destination=${destination}`;
 
-    const url = `http://45.55.32.124:9000/data/?origin=${origin}&destination=${destination}`;
+    const url = `http://localhost:9000/data/?origin=${origin}&destination=${destination}`;
     fetch(url)
       .then(res => res.json())
       .then(json => {

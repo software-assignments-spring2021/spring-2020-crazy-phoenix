@@ -13,11 +13,12 @@ Our MVP will consist of the following main features:
 * Route selection
 
 # to run
-* database must be already running.
+* database (Mongo DB, either on local machine or Atlas) must be already running.
 * in the back-end directory, in the console, type node server.js
 * in the front-end directory, in another console, type npm start.
 * type in http://localhost:3000/login
 This should direct you to a login page. Create account (by clicking on the create account page), then login.
+Our code on GitHub doesn't include the key for Google Maps API. In order to search for directions, please obtain your key or contact us.
 
 
 # Project History
